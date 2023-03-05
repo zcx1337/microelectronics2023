@@ -1,0 +1,1615 @@
+Project Information                              c:\max2work\fifolifo\lifo.rpt
+
+MAX+plus II Compiler Report File
+Version 9.01 07/30/98
+Compiled: 03/16/19 14:23:08
+
+Copyright (C) 1988-1998 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input Output Bidir  Memory  Memory  			 LCs
+POF       Device          Pins  Pins   Pins   Bits % Utilized  LCs  % Utilized
+
+lifo      EPF10K10LC84-3   11     10     0    0         0  %    174      30 %
+
+User Pins:                 11     10     0  
+
+
+
+Project Information                              c:\max2work\fifolifo\lifo.rpt
+
+** FILE HIERARCHY **
+
+
+
+|lpm_counter:8|
+|lpm_counter:8|f8count:p8c0|
+|registerfile:34|
+|registerfile:34|lpm_decode:6|
+|registerfile:34|lpm_decode:6|altshift:external_latency_ffs|
+|registerfile:34|lpm_decode:6|declut:decoder|
+|registerfile:34|dtrigger8x:7|
+|registerfile:34|dtrigger8x:9|
+|registerfile:34|dtrigger8x:18|
+|registerfile:34|dtrigger8x:8|
+|registerfile:34|dtrigger8x:14|
+|registerfile:34|dtrigger8x:13|
+|registerfile:34|dtrigger8x:12|
+|registerfile:34|dtrigger8x:11|
+|registerfile:34|dtrigger8x:10|
+|registerfile:34|lpm_mux:19|
+|registerfile:34|lpm_mux:19|bypassff:sel_latency_ff0|
+|registerfile:34|lpm_mux:19|altshift:external_latency_ffs|
+|registerfile:34|lpm_mux:19|muxlut:135|
+|registerfile:34|lpm_mux:19|muxlut:135|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:135|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:135|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:156|
+|registerfile:34|lpm_mux:19|muxlut:156|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:156|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:156|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:177|
+|registerfile:34|lpm_mux:19|muxlut:177|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:177|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:177|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:198|
+|registerfile:34|lpm_mux:19|muxlut:198|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:198|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:198|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:219|
+|registerfile:34|lpm_mux:19|muxlut:219|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:219|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:219|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:240|
+|registerfile:34|lpm_mux:19|muxlut:240|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:240|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:240|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:261|
+|registerfile:34|lpm_mux:19|muxlut:261|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:261|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:261|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:282|
+|registerfile:34|lpm_mux:19|muxlut:282|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:282|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:282|muxlut:77|
+|delay:40|
+|delay:41|
+|7483:52|
+
+
+Device-Specific Information:                     c:\max2work\fifolifo\lifo.rpt
+lifo
+
+***** Logic for device 'lifo' compiled without errors.
+
+
+
+
+Device: EPF10K10LC84-3
+
+FLEX 10K Configuration Scheme: Passive Serial
+
+Device Options:
+    User-Supplied Start-Up Clock               = OFF
+    Auto-Restart Configuration on Frame Error  = OFF
+    Release Clears Before Tri-States           = OFF
+    Enable Chip_Wide Reset                     = OFF
+    Enable Chip-Wide Output Enable             = OFF
+    Enable INIT_DONE Output                    = OFF
+    JTAG User Code                             = 7f
+
+                                                                         ^     
+                                                                         C     
+                R  R  R  R  R  R  R     R           R     R  R  R  R     O     
+                E  E  E  E  E  E  E     E           E     E  E  E  E     N     
+                S  S  S  S  S  S  S  V  S           S  G  S  S  S  S     F     
+                E  E  E  E  E  E  E  C  E           E  N  E  E  E  E     _  ^  
+                R  R  R  R  R  R  R  C  R           R  D  R  R  R  R  #  D  n  
+                V  V  V  V  V  V  V  I  V  D  D     V  I  V  V  V  V  T  O  C  
+                E  E  E  E  E  E  E  N  E  I  I  W  E  N  E  E  E  E  C  N  E  
+                D  D  D  D  D  D  D  T  D  6  5  R  D  T  D  D  D  D  K  E  O  
+              -----------------------------------------------------------------_ 
+            /  11 10  9  8  7  6  5  4  3  2  1 84 83 82 81 80 79 78 77 76 75   | 
+    ^DATA0 | 12                                                              74 | #TDO 
+     ^DCLK | 13                                                              73 | RESERVED 
+      ^nCE | 14                                                              72 | RESERVED 
+      #TDI | 15                                                              71 | RESERVED 
+  RESERVED | 16                                                              70 | RESERVED 
+  RESERVED | 17                                                              69 | RESERVED 
+     empty | 18                                                              68 | GNDINT 
+      full | 19                                                              67 | DI4 
+    VCCINT | 20                                                              66 | DI3 
+  RESERVED | 21                                                              65 | DI1 
+  RESERVED | 22                        EPF10K10LC84-3                        64 | DO1 
+       DO3 | 23                                                              63 | VCCINT 
+       DO4 | 24                                                              62 | DI2 
+       DO5 | 25                                                              61 | DI0 
+    GNDINT | 26                                                              60 | DO6 
+  RESERVED | 27                                                              59 | DO7 
+  RESERVED | 28                                                              58 | RESERVED 
+       DO2 | 29                                                              57 | #TMS 
+       DO0 | 30                                                              56 | #nTRST 
+    ^MSEL0 | 31                                                              55 | ^nSTATUS 
+    ^MSEL1 | 32                                                              54 | RESERVED 
+           |_  33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53  _| 
+             ------------------------------------------------------------------ 
+                V  ^  R  R  R  R  R  V  G  R  R  D  V  G  R  R  R  R  R  R  R  
+                C  n  E  E  E  E  E  C  N  e  D  I  C  N  E  E  E  E  E  E  E  
+                C  C  S  S  S  S  S  C  D  s     7  C  D  S  S  S  S  S  S  S  
+                I  O  E  E  E  E  E  I  I  e        I  I  E  E  E  E  E  E  E  
+                N  N  R  R  R  R  R  N  N  t        N  N  R  R  R  R  R  R  R  
+                T  F  V  V  V  V  V  T  T           T  T  V  V  V  V  V  V  V  
+                   I  E  E  E  E  E                       E  E  E  E  E  E  E  
+                   G  D  D  D  D  D                       D  D  D  D  D  D  D  
+                                                                               
+                                                                               
+
+
+N.C. = Not Connected.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+GNDINT = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+GNDIO = Dedicated ground pin, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+^ = Dedicated configuration pin.
++ = Reserved configuration pin, which is tri-stated during user mode.
+* = Reserved configuration pin, which drives out in user mode.
+PDn = Power Down pin. 
+@ = Special-purpose pin. 
+# = JTAG Boundary-Scan Testing/In-System Programming or Configuration Pin. The JTAG inputs (TMS, TCK, TDI) should be tied to VCC when not in use.
+& = JTAG pin used for I/O. When used as user I/O, JTAG pins must be kept stable before and during configuration.  JTAG pin stability prevents accidental loading of JTAG instructions.
+
+
+Device-Specific Information:                     c:\max2work\fifolifo\lifo.rpt
+lifo
+
+** RESOURCE USAGE **
+
+Logic                Column       Row                                   
+Array                Interconnect Interconnect         Clears/     External  
+Block   Logic Cells  Driven       Driven       Clocks  Presets   Interconnect
+A3       8/ 8(100%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       1/22(  4%)   
+A4       1/ 8( 12%)   0/ 8(  0%)   1/ 8( 12%)    0/2    0/2       3/22( 13%)   
+A5       8/ 8(100%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       1/22(  4%)   
+A6       1/ 8( 12%)   0/ 8(  0%)   1/ 8( 12%)    0/2    0/2       3/22( 13%)   
+A7       4/ 8( 50%)   0/ 8(  0%)   3/ 8( 37%)    1/2    1/2       2/22(  9%)   
+A11      7/ 8( 87%)   0/ 8(  0%)   1/ 8( 12%)    0/2    0/2       1/22(  4%)   
+A13      3/ 8( 37%)   3/ 8( 37%)   0/ 8(  0%)    0/2    0/2       4/22( 18%)   
+A16      1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       4/22( 18%)   
+A17      1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       4/22( 18%)   
+A18      1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       4/22( 18%)   
+A19      1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       4/22( 18%)   
+A20      1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       4/22( 18%)   
+A21      8/ 8(100%)   0/ 8(  0%)   1/ 8( 12%)    0/2    0/2       1/22(  4%)   
+A22      3/ 8( 37%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       1/22(  4%)   
+A23      8/ 8(100%)   0/ 8(  0%)   1/ 8( 12%)    0/2    0/2       1/22(  4%)   
+A24      1/ 8( 12%)   0/ 8(  0%)   1/ 8( 12%)    0/2    0/2       1/22(  4%)   
+B1       4/ 8( 50%)   0/ 8(  0%)   2/ 8( 25%)    1/2    0/2      10/22( 45%)   
+B8       6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       5/22( 22%)   
+B9       6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       6/22( 27%)   
+B10      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       6/22( 27%)   
+B11      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       5/22( 22%)   
+B14      4/ 8( 50%)   0/ 8(  0%)   2/ 8( 25%)    1/2    0/2      10/22( 45%)   
+B16      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       5/22( 22%)   
+B22      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       6/22( 27%)   
+B23      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       5/22( 22%)   
+B24      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       6/22( 27%)   
+C2       4/ 8( 50%)   0/ 8(  0%)   2/ 8( 25%)    1/2    0/2      10/22( 45%)   
+C8       6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       6/22( 27%)   
+C9       6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       6/22( 27%)   
+C10      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       5/22( 22%)   
+C12      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       5/22( 22%)   
+C15      8/ 8(100%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2      14/22( 63%)   
+C17      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       5/22( 22%)   
+C18      2/ 8( 25%)   0/ 8(  0%)   2/ 8( 25%)    1/2    0/2       3/22( 13%)   
+C21      5/ 8( 62%)   1/ 8( 12%)   1/ 8( 12%)    0/2    0/2       1/22(  4%)   
+C23      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       6/22( 27%)   
+C24      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    2/2    0/2       6/22( 27%)   
+
+
+Embedded             Column       Row                                   
+Array     Embedded   Interconnect Interconnect         Read/      External  
+Block     Cells      Driven       Driven       Clocks  Write    Interconnect
+
+
+Total dedicated input pins used:                 6/6      (100%)
+Total I/O pins used:                            15/53     ( 28%)
+Total logic cells used:                        174/576    ( 30%)
+Total embedded cells used:                       0/24     (  0%)
+Total EABs used:                                 0/3      (  0%)
+Average fan-in:                                 1.93/4    ( 48%)
+Total fan-in:                                 336/2304    ( 14%)
+
+Total input pins required:                      11
+Total input I/O cell registers required:         0
+Total output pins required:                     10
+Total output I/O cell registers required:        0
+Total buried I/O cell registers required:        0
+Total bidirectional pins required:               0
+Total reserved pins required                     0
+Total logic cells required:                    174
+Total flipflops required:                       75
+Total packed registers required:                 0
+Total logic cells in carry chains:               0
+Total number of carry chains:                    0
+Total logic cells in cascade chains:             0
+Total number of cascade chains:                  0
+Total single-pin Clock Enables required:         0
+Total single-pin Output Enables required:        0
+
+Synthesized logic cells:                        16/ 576   (  2%)
+
+Logic Cell and Embedded Cell Counts
+
+Column:  01  02  03  04  05  06  07  08  09  10  11  12  EA  13  14  15  16  17  18  19  20  21  22  23  24  Total(LC/EC)
+ A:      0   0   8   1   8   1   4   0   0   0   7   0   0   3   0   0   1   1   1   1   1   8   3   8   1     57/0  
+ B:      4   0   0   0   0   0   0   6   6   6   6   0   0   0   4   0   6   0   0   0   0   0   6   6   6     56/0  
+ C:      0   4   0   0   0   0   0   6   6   6   0   6   0   0   0   8   0   6   2   0   0   5   0   6   6     61/0  
+
+Total:   4   4   8   1   8   1   4  12  12  12  13   6   0   3   4   8   7   7   3   1   1  13   9  20  13    174/0  
+
+
+
+Device-Specific Information:                     c:\max2work\fifolifo\lifo.rpt
+lifo
+
+** INPUTS **
+
+                                                    Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+  61      -     -    C    --      INPUT                0    0    0    8  DI0
+  65      -     -    B    --      INPUT                0    0    0    8  DI1
+  62      -     -    C    --      INPUT                0    0    0    8  DI2
+  66      -     -    B    --      INPUT                0    0    0    8  DI3
+  67      -     -    B    --      INPUT                0    0    0    8  DI4
+   1      -     -    -    --      INPUT                0    0    0    8  DI5
+   2      -     -    -    --      INPUT                0    0    0    8  DI6
+  44      -     -    -    --      INPUT                0    0    0    8  DI7
+  43      -     -    -    --      INPUT  G             0    0    0    3  RD
+  42      -     -    -    --      INPUT  G             0    0    0    0  Reset
+  84      -     -    -    --      INPUT                0    0    0    9  WR
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+G = Global Source. Fan-out destinations counted here do not include destinations
+that are driven using global routing resources. Refer to the Auto Global Signals,
+Clock Signals, Clear Signals, Synchronous Load Signals, and Synchronous Clear Signals
+Sections of this Report File for information on which signals' fan-outs are used as
+Clock, Clear, Preset, Output Enable, and synchronous Load signals.
+
+
+Device-Specific Information:                     c:\max2work\fifolifo\lifo.rpt
+lifo
+
+** OUTPUTS **
+
+       Fed By Fed By                                Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+  30      -     -    C    --     OUTPUT                0    1    0    0  DO0
+  64      -     -    B    --     OUTPUT                0    1    0    0  DO1
+  29      -     -    C    --     OUTPUT                0    1    0    0  DO2
+  23      -     -    B    --     OUTPUT                0    1    0    0  DO3
+  24      -     -    B    --     OUTPUT                0    1    0    0  DO4
+  25      -     -    B    --     OUTPUT                0    1    0    0  DO5
+  60      -     -    C    --     OUTPUT                0    1    0    0  DO6
+  59      -     -    C    --     OUTPUT                0    1    0    0  DO7
+  18      -     -    A    --     OUTPUT                0    1    0    0  empty
+  19      -     -    A    --     OUTPUT                0    1    0    0  full
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+
+
+Device-Specific Information:                     c:\max2work\fifolifo\lifo.rpt
+lifo
+
+** BURIED LOGIC **
+
+                                                    Fan-In    Fan-Out
+ IOC     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+   -      7     -    A    11      LCELL                0    1    0    1  |delay:40|:36
+   -      2     -    A    21      LCELL                0    1    0    1  |delay:40|:37
+   -      2     -    A    11      LCELL                0    1    0    1  |delay:40|:38
+   -      3     -    A    21      LCELL                0    1    0    1  |delay:40|:39
+   -      2     -    A    23      LCELL                0    1    0    1  |delay:40|:42
+   -      3     -    A    23      LCELL                0    1    0    1  |delay:40|:44
+   -      4     -    A    21      LCELL                0    1    0    1  |delay:40|:47
+   -      4     -    A    23      LCELL                0    1    0    1  |delay:40|:48
+   -      3     -    A    11      LCELL                0    1    0    1  |delay:40|:49
+   -      1     -    A    21      LCELL                0    1    0    8  |delay:40|out0 (|delay:40|:50)
+   -      1     -    A    24      LCELL                0    1    0    8  |delay:40|out1 (|delay:40|:51)
+   -      1     -    A    23      LCELL                0    1    0    8  |delay:40|out2 (|delay:40|:52)
+   -      5     -    A    21      LCELL                0    1    0    1  |delay:40|:53
+   -      6     -    A    21      LCELL                0    1    0    1  |delay:40|:54
+   -      5     -    A    23      LCELL                0    1    0    1  |delay:40|:55
+   -      4     -    A    11      LCELL                0    1    0    1  |delay:40|:56
+   -      5     -    A    11      LCELL                0    1    0    1  |delay:40|:57
+   -      6     -    A    23      LCELL                0    1    0    1  |delay:40|:58
+   -      7     -    A    21      LCELL                0    1    0    1  |delay:40|:59
+   -      8     -    A    21      LCELL                0    1    0    1  |delay:40|:60
+   -      6     -    A    11      LCELL                0    1    0    1  |delay:40|:61
+   -      7     -    A    23      LCELL                0    1    0    1  |delay:40|:62
+   -      8     -    A    23      LCELL                0    1    0    1  |delay:40|:63
+   -      1     -    A    11      LCELL                0    1    0    1  |delay:40|:64
+   -      8     -    A    05      LCELL                0    1    0    1  |delay:41|:36
+   -      8     -    A    03      LCELL                0    1    0    1  |delay:41|:37
+   -      7     -    A    05      LCELL                0    1    0    1  |delay:41|:38
+   -      2     -    A    03      LCELL                0    1    0    1  |delay:41|:39
+   -      2     -    A    22      LCELL                0    1    0    1  |delay:41|:42
+   -      3     -    A    22      LCELL                0    1    0    1  |delay:41|:44
+   -      3     -    A    03      LCELL                0    1    0    1  |delay:41|:47
+   -      1     -    A    22      LCELL                0    1    0    1  |delay:41|:48
+   -      2     -    A    05      LCELL                0    1    0    1  |delay:41|:49
+   -      1     -    A    03      LCELL                0    1    0   32  |delay:41|out0 (|delay:41|:50)
+   -      1     -    A    05      LCELL                0    1    0   24  |delay:41|out1 (|delay:41|:51)
+   -      7     -    C    21      LCELL                0    1    0   16  |delay:41|out2 (|delay:41|:52)
+   -      4     -    A    03      LCELL                0    1    0    1  |delay:41|:53
+   -      5     -    A    03      LCELL                0    1    0    1  |delay:41|:54
+   -      1     -    C    21      LCELL                0    1    0    1  |delay:41|:55
+   -      3     -    A    05      LCELL                0    1    0    1  |delay:41|:56
+   -      4     -    A    05      LCELL                0    1    0    1  |delay:41|:57
+   -      2     -    C    21      LCELL                0    1    0    1  |delay:41|:58
+   -      6     -    A    03      LCELL                0    1    0    1  |delay:41|:59
+   -      7     -    A    03      LCELL                0    1    0    1  |delay:41|:60
+   -      5     -    A    05      LCELL                0    1    0    1  |delay:41|:61
+   -      3     -    C    21      LCELL                0    1    0    1  |delay:41|:62
+   -      4     -    C    21      LCELL                0    1    0    1  |delay:41|:63
+   -      6     -    A    05      LCELL                0    1    0    1  |delay:41|:64
+   -      1     -    A    07       DFFE                1    3    0    4  |LPM_COUNTER:8|f8count:p8c0|QC (|LPM_COUNTER:8|f8count:p8c0|:6)
+   -      2     -    A    07       DFFE                1    2    0    5  |LPM_COUNTER:8|f8count:p8c0|QB (|LPM_COUNTER:8|f8count:p8c0|:7)
+   -      3     -    A    07       DFFE                0    1    0    6  |LPM_COUNTER:8|f8count:p8c0|QA (|LPM_COUNTER:8|f8count:p8c0|:8)
+   -      3     -    C    12       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:7|Q0 (|registerfile:34|dtrigger8x:7|:12)
+   -      2     -    B    23       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:7|Q1 (|registerfile:34|dtrigger8x:7|:15)
+   -      4     -    C    12       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:7|Q2 (|registerfile:34|dtrigger8x:7|:16)
+   -      4     -    B    08       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:7|Q3 (|registerfile:34|dtrigger8x:7|:17)
+   -      4     -    B    23       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:7|Q4 (|registerfile:34|dtrigger8x:7|:18)
+   -      5     -    B    08       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:7|Q5 (|registerfile:34|dtrigger8x:7|:19)
+   -      4     -    C    17       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:7|Q6 (|registerfile:34|dtrigger8x:7|:20)
+   -      5     -    C    17       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:7|Q7 (|registerfile:34|dtrigger8x:7|:21)
+   -      5     -    C    12       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:8|Q0 (|registerfile:34|dtrigger8x:8|:12)
+   -      5     -    B    23       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:8|Q1 (|registerfile:34|dtrigger8x:8|:15)
+   -      6     -    C    12       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:8|Q2 (|registerfile:34|dtrigger8x:8|:16)
+   -      6     -    B    08       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:8|Q3 (|registerfile:34|dtrigger8x:8|:17)
+   -      6     -    B    23       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:8|Q4 (|registerfile:34|dtrigger8x:8|:18)
+   -      3     -    B    08       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:8|Q5 (|registerfile:34|dtrigger8x:8|:19)
+   -      2     -    C    17       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:8|Q6 (|registerfile:34|dtrigger8x:8|:20)
+   -      1     -    C    17       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:8|Q7 (|registerfile:34|dtrigger8x:8|:21)
+   -      3     -    C    10       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:9|Q0 (|registerfile:34|dtrigger8x:9|:12)
+   -      2     -    B    16       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:9|Q1 (|registerfile:34|dtrigger8x:9|:15)
+   -      4     -    C    10       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:9|Q2 (|registerfile:34|dtrigger8x:9|:16)
+   -      3     -    B    11       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:9|Q3 (|registerfile:34|dtrigger8x:9|:17)
+   -      4     -    B    16       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:9|Q4 (|registerfile:34|dtrigger8x:9|:18)
+   -      4     -    B    11       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:9|Q5 (|registerfile:34|dtrigger8x:9|:19)
+   -      2     -    C    18       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:9|Q6 (|registerfile:34|dtrigger8x:9|:20)
+   -      1     -    C    18       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:9|Q7 (|registerfile:34|dtrigger8x:9|:21)
+   -      5     -    C    10       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:10|Q0 (|registerfile:34|dtrigger8x:10|:12)
+   -      5     -    B    16       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:10|Q1 (|registerfile:34|dtrigger8x:10|:15)
+   -      6     -    C    10       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:10|Q2 (|registerfile:34|dtrigger8x:10|:16)
+   -      5     -    B    11       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:10|Q3 (|registerfile:34|dtrigger8x:10|:17)
+   -      6     -    B    16       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:10|Q4 (|registerfile:34|dtrigger8x:10|:18)
+   -      6     -    B    11       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:10|Q5 (|registerfile:34|dtrigger8x:10|:19)
+   -      7     -    C    15       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:10|Q6 (|registerfile:34|dtrigger8x:10|:20)
+   -      8     -    C    15       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:10|Q7 (|registerfile:34|dtrigger8x:10|:21)
+   -      4     -    C    09       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:11|Q0 (|registerfile:34|dtrigger8x:11|:12)
+   -      5     -    B    22       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:11|Q1 (|registerfile:34|dtrigger8x:11|:15)
+   -      5     -    C    09       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:11|Q2 (|registerfile:34|dtrigger8x:11|:16)
+   -      6     -    B    10       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:11|Q3 (|registerfile:34|dtrigger8x:11|:17)
+   -      6     -    B    22       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:11|Q4 (|registerfile:34|dtrigger8x:11|:18)
+   -      5     -    B    10       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:11|Q5 (|registerfile:34|dtrigger8x:11|:19)
+   -      5     -    C    23       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:11|Q6 (|registerfile:34|dtrigger8x:11|:20)
+   -      3     -    C    23       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:11|Q7 (|registerfile:34|dtrigger8x:11|:21)
+   -      1     -    C    09       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:12|Q0 (|registerfile:34|dtrigger8x:12|:12)
+   -      4     -    B    22       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:12|Q1 (|registerfile:34|dtrigger8x:12|:15)
+   -      2     -    C    09       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:12|Q2 (|registerfile:34|dtrigger8x:12|:16)
+   -      4     -    B    10       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:12|Q3 (|registerfile:34|dtrigger8x:12|:17)
+   -      3     -    B    22       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:12|Q4 (|registerfile:34|dtrigger8x:12|:18)
+   -      3     -    B    10       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:12|Q5 (|registerfile:34|dtrigger8x:12|:19)
+   -      2     -    C    23       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:12|Q6 (|registerfile:34|dtrigger8x:12|:20)
+   -      1     -    C    23       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:12|Q7 (|registerfile:34|dtrigger8x:12|:21)
+   -      4     -    C    08       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:13|Q0 (|registerfile:34|dtrigger8x:13|:12)
+   -      4     -    B    24       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:13|Q1 (|registerfile:34|dtrigger8x:13|:15)
+   -      3     -    C    08       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:13|Q2 (|registerfile:34|dtrigger8x:13|:16)
+   -      3     -    B    09       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:13|Q3 (|registerfile:34|dtrigger8x:13|:17)
+   -      3     -    B    24       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:13|Q4 (|registerfile:34|dtrigger8x:13|:18)
+   -      4     -    B    09       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:13|Q5 (|registerfile:34|dtrigger8x:13|:19)
+   -      1     -    C    24       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:13|Q6 (|registerfile:34|dtrigger8x:13|:20)
+   -      2     -    C    24       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:13|Q7 (|registerfile:34|dtrigger8x:13|:21)
+   -      5     -    C    08       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:14|Q0 (|registerfile:34|dtrigger8x:14|:12)
+   -      6     -    B    24       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:14|Q1 (|registerfile:34|dtrigger8x:14|:15)
+   -      6     -    C    08       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:14|Q2 (|registerfile:34|dtrigger8x:14|:16)
+   -      6     -    B    09       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:14|Q3 (|registerfile:34|dtrigger8x:14|:17)
+   -      5     -    B    24       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:14|Q4 (|registerfile:34|dtrigger8x:14|:18)
+   -      5     -    B    09       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:14|Q5 (|registerfile:34|dtrigger8x:14|:19)
+   -      5     -    C    24       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:14|Q6 (|registerfile:34|dtrigger8x:14|:20)
+   -      4     -    C    24       DFFE                1    1    0    1  |registerfile:34|dtrigger8x:14|Q7 (|registerfile:34|dtrigger8x:14|:21)
+   -      6     -    C    02       DFFE   +            0    4    1    0  |registerfile:34|dtrigger8x:18|Q0 (|registerfile:34|dtrigger8x:18|:12)
+   -      6     -    B    14       DFFE   +            0    4    1    0  |registerfile:34|dtrigger8x:18|Q1 (|registerfile:34|dtrigger8x:18|:15)
+   -      5     -    C    02       DFFE   +            0    4    1    0  |registerfile:34|dtrigger8x:18|Q2 (|registerfile:34|dtrigger8x:18|:16)
+   -      4     -    B    01       DFFE   +            0    4    1    0  |registerfile:34|dtrigger8x:18|Q3 (|registerfile:34|dtrigger8x:18|:17)
+   -      5     -    B    14       DFFE   +            0    4    1    0  |registerfile:34|dtrigger8x:18|Q4 (|registerfile:34|dtrigger8x:18|:18)
+   -      8     -    B    01       DFFE   +            0    4    1    0  |registerfile:34|dtrigger8x:18|Q5 (|registerfile:34|dtrigger8x:18|:19)
+   -      4     -    C    15       DFFE   +            0    4    1    0  |registerfile:34|dtrigger8x:18|Q6 (|registerfile:34|dtrigger8x:18|:20)
+   -      5     -    C    15       DFFE   +            0    4    1    0  |registerfile:34|dtrigger8x:18|Q7 (|registerfile:34|dtrigger8x:18|:21)
+   -      3     -    A    16       AND2                1    3    0    8  |registerfile:34|LPM_DECODE:6|declut:decoder|anode0_3
+   -      3     -    A    13       AND2                1    3    0    8  |registerfile:34|LPM_DECODE:6|declut:decoder|anode1_3
+   -      2     -    A    13       AND2                1    3    0    8  |registerfile:34|LPM_DECODE:6|declut:decoder|anode2_3
+   -      1     -    A    13       AND2                1    3    0    8  |registerfile:34|LPM_DECODE:6|declut:decoder|anode3_3
+   -      7     -    A    20       AND2                1    3    0    8  |registerfile:34|LPM_DECODE:6|declut:decoder|anode4_3
+   -      1     -    A    19       AND2                1    3    0    8  |registerfile:34|LPM_DECODE:6|declut:decoder|anode5_3
+   -      1     -    A    18       AND2                1    3    0    8  |registerfile:34|LPM_DECODE:6|declut:decoder|anode6_3
+   -      2     -    A    17       AND2                1    3    0    8  |registerfile:34|LPM_DECODE:6|declut:decoder|anode7_3
+   -      1     -    C    10        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:135|muxlut:43|~44~1
+   -      1     -    C    12        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:135|muxlut:43|~49~1
+   -      1     -    C    08        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:135|muxlut:60|:44
+   -      7     -    C    09        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:135|muxlut:60|:49
+   -      2     -    C    02        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:135|muxlut:77|:37
+   -      1     -    B    16        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:156|muxlut:43|~44~1
+   -      1     -    B    23        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:156|muxlut:43|~49~1
+   -      1     -    B    24        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:156|muxlut:60|:44
+   -      1     -    B    22        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:156|muxlut:60|:49
+   -      1     -    B    14        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:156|muxlut:77|:37
+   -      2     -    C    10        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:177|muxlut:43|~44~1
+   -      2     -    C    12        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:177|muxlut:43|~49~1
+   -      2     -    C    08        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:177|muxlut:60|:44
+   -      3     -    C    09        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:177|muxlut:60|:49
+   -      1     -    C    02        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:177|muxlut:77|:37
+   -      2     -    B    11        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:198|muxlut:43|~44~1
+   -      2     -    B    08        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:198|muxlut:43|~49~1
+   -      2     -    B    09        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:198|muxlut:60|:44
+   -      1     -    B    10        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:198|muxlut:60|:49
+   -      1     -    B    01        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:198|muxlut:77|:37
+   -      3     -    B    16        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:219|muxlut:43|~44~1
+   -      3     -    B    23        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:219|muxlut:43|~49~1
+   -      2     -    B    24        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:219|muxlut:60|:44
+   -      2     -    B    22        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:219|muxlut:60|:49
+   -      2     -    B    14        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:219|muxlut:77|:37
+   -      1     -    B    11        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:240|muxlut:43|~44~1
+   -      1     -    B    08        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:240|muxlut:43|~49~1
+   -      1     -    B    09        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:240|muxlut:60|:44
+   -      2     -    B    10        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:240|muxlut:60|:49
+   -      2     -    B    01        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:240|muxlut:77|:37
+   -      1     -    C    15        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:261|muxlut:43|~44~1
+   -      3     -    C    17        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:261|muxlut:43|~49~1
+   -      3     -    C    24        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:261|muxlut:60|:44
+   -      4     -    C    23        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:261|muxlut:60|:49
+   -      2     -    C    15        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:261|muxlut:77|:37
+   -      3     -    C    15        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:282|muxlut:43|~44~1
+   -      6     -    C    17        OR2    s           0    3    0    1  |registerfile:34|LPM_MUX:19|muxlut:282|muxlut:43|~49~1
+   -      6     -    C    24        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:282|muxlut:60|:44
+   -      8     -    C    23        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:282|muxlut:60|:49
+   -      6     -    C    15        OR2                0    4    0    1  |registerfile:34|LPM_MUX:19|muxlut:282|muxlut:77|:37
+   -      4     -    A    07        OR2                2    0    0    3  :55
+   -      6     -    A    04       AND2                0    3    1    0  :58
+   -      5     -    A    06       AND2                0    3    1    0  :65
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+p = Packed register
+
+
+Device-Specific Information:                     c:\max2work\fifolifo\lifo.rpt
+lifo
+
+** FASTTRACK INTERCONNECT UTILIZATION **
+
+Row FastTrack Interconnect:
+
+          Global         Left Half-      Right Half-
+         FastTrack       FastTrack       FastTrack 
+Row     Interconnect    Interconnect    Interconnect    Input Pins     Output Pins     Bidir Pins
+A:       3/ 96(  3%)     3/ 48(  6%)     3/ 48(  6%)    0/16(  0%)      2/16( 12%)     0/16(  0%)
+B:      15/ 96( 15%)    10/ 48( 20%)     9/ 48( 18%)    3/16( 18%)      4/16( 25%)     0/16(  0%)
+C:      13/ 96( 13%)    10/ 48( 20%)    11/ 48( 22%)    2/16( 12%)      4/16( 25%)     0/16(  0%)
+
+
+Column FastTrack Interconnect:
+
+         FastTrack                                 
+Column  Interconnect    Input Pins     Output Pins     Bidir Pins
+01:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+02:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+03:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+04:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+05:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+06:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+07:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+08:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+09:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+10:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+11:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+12:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+13:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+14:      2/24(  8%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+15:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+16:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+17:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+18:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+19:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+20:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+21:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+22:      2/24(  8%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+23:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+24:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+EA:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+
+
+Device-Specific Information:                     c:\max2work\fifolifo\lifo.rpt
+lifo
+
+** CLOCK SIGNALS **
+
+Type     Fan-out       Name
+INPUT       11         RD
+LCELL        8         |registerfile:34|LPM_DECODE:6|declut:decoder|anode0_3
+LCELL        8         |registerfile:34|LPM_DECODE:6|declut:decoder|anode1_3
+LCELL        8         |registerfile:34|LPM_DECODE:6|declut:decoder|anode2_3
+LCELL        8         |registerfile:34|LPM_DECODE:6|declut:decoder|anode3_3
+LCELL        8         |registerfile:34|LPM_DECODE:6|declut:decoder|anode4_3
+LCELL        8         |registerfile:34|LPM_DECODE:6|declut:decoder|anode5_3
+LCELL        8         |registerfile:34|LPM_DECODE:6|declut:decoder|anode6_3
+LCELL        8         |registerfile:34|LPM_DECODE:6|declut:decoder|anode7_3
+LCELL        3         :55
+
+
+Device-Specific Information:                     c:\max2work\fifolifo\lifo.rpt
+lifo
+
+** CLEAR SIGNALS **
+
+Type     Fan-out       Name
+INPUT        3         Reset
+
+
+Device-Specific Information:                     c:\max2work\fifolifo\lifo.rpt
+lifo
+
+** EQUATIONS **
+
+DI0      : INPUT;
+DI1      : INPUT;
+DI2      : INPUT;
+DI3      : INPUT;
+DI4      : INPUT;
+DI5      : INPUT;
+DI6      : INPUT;
+DI7      : INPUT;
+RD       : INPUT;
+Reset    : INPUT;
+WR       : INPUT;
+
+-- Node name is 'DO0' 
+-- Equation name is 'DO0', type is output 
+DO0      =  _LC6_C2;
+
+-- Node name is 'DO1' 
+-- Equation name is 'DO1', type is output 
+DO1      =  _LC6_B14;
+
+-- Node name is 'DO2' 
+-- Equation name is 'DO2', type is output 
+DO2      =  _LC5_C2;
+
+-- Node name is 'DO3' 
+-- Equation name is 'DO3', type is output 
+DO3      =  _LC4_B1;
+
+-- Node name is 'DO4' 
+-- Equation name is 'DO4', type is output 
+DO4      =  _LC5_B14;
+
+-- Node name is 'DO5' 
+-- Equation name is 'DO5', type is output 
+DO5      =  _LC8_B1;
+
+-- Node name is 'DO6' 
+-- Equation name is 'DO6', type is output 
+DO6      =  _LC4_C15;
+
+-- Node name is 'DO7' 
+-- Equation name is 'DO7', type is output 
+DO7      =  _LC5_C15;
+
+-- Node name is 'empty' 
+-- Equation name is 'empty', type is output 
+empty    =  _LC5_A6;
+
+-- Node name is 'full' 
+-- Equation name is 'full', type is output 
+full     =  _LC6_A4;
+
+-- Node name is '|delay:40|:50' = '|delay:40|out0' 
+-- Equation name is '_LC1_A21', type is buried 
+_LC1_A21 = LCELL( _LC8_A21);
+
+-- Node name is '|delay:40|:51' = '|delay:40|out1' 
+-- Equation name is '_LC1_A24', type is buried 
+_LC1_A24 = LCELL( _LC1_A11);
+
+-- Node name is '|delay:40|:52' = '|delay:40|out2' 
+-- Equation name is '_LC1_A23', type is buried 
+_LC1_A23 = LCELL( _LC8_A23);
+
+-- Node name is '|delay:40|:36' 
+-- Equation name is '_LC7_A11', type is buried 
+_LC7_A11 = LCELL( _LC2_A7);
+
+-- Node name is '|delay:40|:37' 
+-- Equation name is '_LC2_A21', type is buried 
+_LC2_A21 = LCELL( _LC3_A7);
+
+-- Node name is '|delay:40|:38' 
+-- Equation name is '_LC2_A11', type is buried 
+_LC2_A11 = LCELL( _LC7_A11);
+
+-- Node name is '|delay:40|:39' 
+-- Equation name is '_LC3_A21', type is buried 
+_LC3_A21 = LCELL( _LC2_A21);
+
+-- Node name is '|delay:40|:42' 
+-- Equation name is '_LC2_A23', type is buried 
+_LC2_A23 = LCELL( _LC1_A7);
+
+-- Node name is '|delay:40|:44' 
+-- Equation name is '_LC3_A23', type is buried 
+_LC3_A23 = LCELL( _LC2_A23);
+
+-- Node name is '|delay:40|:47' 
+-- Equation name is '_LC4_A21', type is buried 
+_LC4_A21 = LCELL( _LC3_A21);
+
+-- Node name is '|delay:40|:48' 
+-- Equation name is '_LC4_A23', type is buried 
+_LC4_A23 = LCELL( _LC3_A23);
+
+-- Node name is '|delay:40|:49' 
+-- Equation name is '_LC3_A11', type is buried 
+_LC3_A11 = LCELL( _LC2_A11);
+
+-- Node name is '|delay:40|:53' 
+-- Equation name is '_LC5_A21', type is buried 
+_LC5_A21 = LCELL( _LC4_A21);
+
+-- Node name is '|delay:40|:54' 
+-- Equation name is '_LC6_A21', type is buried 
+_LC6_A21 = LCELL( _LC5_A21);
+
+-- Node name is '|delay:40|:55' 
+-- Equation name is '_LC5_A23', type is buried 
+_LC5_A23 = LCELL( _LC4_A23);
+
+-- Node name is '|delay:40|:56' 
+-- Equation name is '_LC4_A11', type is buried 
+_LC4_A11 = LCELL( _LC3_A11);
+
+-- Node name is '|delay:40|:57' 
+-- Equation name is '_LC5_A11', type is buried 
+_LC5_A11 = LCELL( _LC4_A11);
+
+-- Node name is '|delay:40|:58' 
+-- Equation name is '_LC6_A23', type is buried 
+_LC6_A23 = LCELL( _LC5_A23);
+
+-- Node name is '|delay:40|:59' 
+-- Equation name is '_LC7_A21', type is buried 
+_LC7_A21 = LCELL( _LC6_A21);
+
+-- Node name is '|delay:40|:60' 
+-- Equation name is '_LC8_A21', type is buried 
+_LC8_A21 = LCELL( _LC7_A21);
+
+-- Node name is '|delay:40|:61' 
+-- Equation name is '_LC6_A11', type is buried 
+_LC6_A11 = LCELL( _LC5_A11);
+
+-- Node name is '|delay:40|:62' 
+-- Equation name is '_LC7_A23', type is buried 
+_LC7_A23 = LCELL( _LC6_A23);
+
+-- Node name is '|delay:40|:63' 
+-- Equation name is '_LC8_A23', type is buried 
+_LC8_A23 = LCELL( _LC7_A23);
+
+-- Node name is '|delay:40|:64' 
+-- Equation name is '_LC1_A11', type is buried 
+_LC1_A11 = LCELL( _LC6_A11);
+
+-- Node name is '|delay:41|:50' = '|delay:41|out0' 
+-- Equation name is '_LC1_A3', type is buried 
+_LC1_A3  = LCELL( _LC7_A3);
+
+-- Node name is '|delay:41|:51' = '|delay:41|out1' 
+-- Equation name is '_LC1_A5', type is buried 
+_LC1_A5  = LCELL( _LC6_A5);
+
+-- Node name is '|delay:41|:52' = '|delay:41|out2' 
+-- Equation name is '_LC7_C21', type is buried 
+_LC7_C21 = LCELL( _LC4_C21);
+
+-- Node name is '|delay:41|:36' 
+-- Equation name is '_LC8_A5', type is buried 
+_LC8_A5  = LCELL( _LC2_A7);
+
+-- Node name is '|delay:41|:37' 
+-- Equation name is '_LC8_A3', type is buried 
+_LC8_A3  = LCELL( _LC3_A7);
+
+-- Node name is '|delay:41|:38' 
+-- Equation name is '_LC7_A5', type is buried 
+_LC7_A5  = LCELL( _LC8_A5);
+
+-- Node name is '|delay:41|:39' 
+-- Equation name is '_LC2_A3', type is buried 
+_LC2_A3  = LCELL( _LC8_A3);
+
+-- Node name is '|delay:41|:42' 
+-- Equation name is '_LC2_A22', type is buried 
+_LC2_A22 = LCELL( _LC1_A7);
+
+-- Node name is '|delay:41|:44' 
+-- Equation name is '_LC3_A22', type is buried 
+_LC3_A22 = LCELL( _LC2_A22);
+
+-- Node name is '|delay:41|:47' 
+-- Equation name is '_LC3_A3', type is buried 
+_LC3_A3  = LCELL( _LC2_A3);
+
+-- Node name is '|delay:41|:48' 
+-- Equation name is '_LC1_A22', type is buried 
+_LC1_A22 = LCELL( _LC3_A22);
+
+-- Node name is '|delay:41|:49' 
+-- Equation name is '_LC2_A5', type is buried 
+_LC2_A5  = LCELL( _LC7_A5);
+
+-- Node name is '|delay:41|:53' 
+-- Equation name is '_LC4_A3', type is buried 
+_LC4_A3  = LCELL( _LC3_A3);
+
+-- Node name is '|delay:41|:54' 
+-- Equation name is '_LC5_A3', type is buried 
+_LC5_A3  = LCELL( _LC4_A3);
+
+-- Node name is '|delay:41|:55' 
+-- Equation name is '_LC1_C21', type is buried 
+_LC1_C21 = LCELL( _LC1_A22);
+
+-- Node name is '|delay:41|:56' 
+-- Equation name is '_LC3_A5', type is buried 
+_LC3_A5  = LCELL( _LC2_A5);
+
+-- Node name is '|delay:41|:57' 
+-- Equation name is '_LC4_A5', type is buried 
+_LC4_A5  = LCELL( _LC3_A5);
+
+-- Node name is '|delay:41|:58' 
+-- Equation name is '_LC2_C21', type is buried 
+_LC2_C21 = LCELL( _LC1_C21);
+
+-- Node name is '|delay:41|:59' 
+-- Equation name is '_LC6_A3', type is buried 
+_LC6_A3  = LCELL( _LC5_A3);
+
+-- Node name is '|delay:41|:60' 
+-- Equation name is '_LC7_A3', type is buried 
+_LC7_A3  = LCELL( _LC6_A3);
+
+-- Node name is '|delay:41|:61' 
+-- Equation name is '_LC5_A5', type is buried 
+_LC5_A5  = LCELL( _LC4_A5);
+
+-- Node name is '|delay:41|:62' 
+-- Equation name is '_LC3_C21', type is buried 
+_LC3_C21 = LCELL( _LC2_C21);
+
+-- Node name is '|delay:41|:63' 
+-- Equation name is '_LC4_C21', type is buried 
+_LC4_C21 = LCELL( _LC3_C21);
+
+-- Node name is '|delay:41|:64' 
+-- Equation name is '_LC6_A5', type is buried 
+_LC6_A5  = LCELL( _LC5_A5);
+
+-- Node name is '|LPM_COUNTER:8|f8count:p8c0|:8' = '|LPM_COUNTER:8|f8count:p8c0|QA' 
+-- Equation name is '_LC3_A7', type is buried 
+_LC3_A7  = DFFE(!_LC3_A7,  _LC4_A7, GLOBAL(!Reset),  VCC,  VCC);
+
+-- Node name is '|LPM_COUNTER:8|f8count:p8c0|:7' = '|LPM_COUNTER:8|f8count:p8c0|QB' 
+-- Equation name is '_LC2_A7', type is buried 
+_LC2_A7  = DFFE( _EQ001,  _LC4_A7, GLOBAL(!Reset),  VCC,  VCC);
+  _EQ001 =  _LC2_A7 & !_LC3_A7 & !RD
+         # !_LC2_A7 & !_LC3_A7 &  RD
+         # !_LC2_A7 &  _LC3_A7 & !RD
+         #  _LC2_A7 &  _LC3_A7 &  RD;
+
+-- Node name is '|LPM_COUNTER:8|f8count:p8c0|:6' = '|LPM_COUNTER:8|f8count:p8c0|QC' 
+-- Equation name is '_LC1_A7', type is buried 
+_LC1_A7  = DFFE( _EQ002,  _LC4_A7, GLOBAL(!Reset),  VCC,  VCC);
+  _EQ002 =  _LC1_A7 & !_LC3_A7 & !RD
+         #  _LC1_A7 & !_LC2_A7 & !RD
+         #  _LC1_A7 &  _LC3_A7 &  RD
+         #  _LC1_A7 & !_LC2_A7 &  _LC3_A7
+         #  _LC1_A7 &  _LC2_A7 &  RD
+         #  _LC1_A7 &  _LC2_A7 & !_LC3_A7
+         # !_LC1_A7 &  _LC2_A7 &  _LC3_A7 & !RD
+         # !_LC1_A7 & !_LC2_A7 & !_LC3_A7 &  RD;
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:12' = '|registerfile:34|dtrigger8x:7|Q0' 
+-- Equation name is '_LC3_C12', type is buried 
+_LC3_C12 = DFFE( DI0,  _LC3_A16,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:15' = '|registerfile:34|dtrigger8x:7|Q1' 
+-- Equation name is '_LC2_B23', type is buried 
+_LC2_B23 = DFFE( DI1,  _LC3_A16,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:16' = '|registerfile:34|dtrigger8x:7|Q2' 
+-- Equation name is '_LC4_C12', type is buried 
+_LC4_C12 = DFFE( DI2,  _LC3_A16,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:17' = '|registerfile:34|dtrigger8x:7|Q3' 
+-- Equation name is '_LC4_B8', type is buried 
+_LC4_B8  = DFFE( DI3,  _LC3_A16,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:18' = '|registerfile:34|dtrigger8x:7|Q4' 
+-- Equation name is '_LC4_B23', type is buried 
+_LC4_B23 = DFFE( DI4,  _LC3_A16,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:19' = '|registerfile:34|dtrigger8x:7|Q5' 
+-- Equation name is '_LC5_B8', type is buried 
+_LC5_B8  = DFFE( DI5,  _LC3_A16,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:20' = '|registerfile:34|dtrigger8x:7|Q6' 
+-- Equation name is '_LC4_C17', type is buried 
+_LC4_C17 = DFFE( DI6,  _LC3_A16,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:21' = '|registerfile:34|dtrigger8x:7|Q7' 
+-- Equation name is '_LC5_C17', type is buried 
+_LC5_C17 = DFFE( DI7,  _LC3_A16,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:12' = '|registerfile:34|dtrigger8x:8|Q0' 
+-- Equation name is '_LC5_C12', type is buried 
+_LC5_C12 = DFFE( DI0,  _LC3_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:15' = '|registerfile:34|dtrigger8x:8|Q1' 
+-- Equation name is '_LC5_B23', type is buried 
+_LC5_B23 = DFFE( DI1,  _LC3_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:16' = '|registerfile:34|dtrigger8x:8|Q2' 
+-- Equation name is '_LC6_C12', type is buried 
+_LC6_C12 = DFFE( DI2,  _LC3_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:17' = '|registerfile:34|dtrigger8x:8|Q3' 
+-- Equation name is '_LC6_B8', type is buried 
+_LC6_B8  = DFFE( DI3,  _LC3_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:18' = '|registerfile:34|dtrigger8x:8|Q4' 
+-- Equation name is '_LC6_B23', type is buried 
+_LC6_B23 = DFFE( DI4,  _LC3_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:19' = '|registerfile:34|dtrigger8x:8|Q5' 
+-- Equation name is '_LC3_B8', type is buried 
+_LC3_B8  = DFFE( DI5,  _LC3_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:20' = '|registerfile:34|dtrigger8x:8|Q6' 
+-- Equation name is '_LC2_C17', type is buried 
+_LC2_C17 = DFFE( DI6,  _LC3_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:21' = '|registerfile:34|dtrigger8x:8|Q7' 
+-- Equation name is '_LC1_C17', type is buried 
+_LC1_C17 = DFFE( DI7,  _LC3_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:12' = '|registerfile:34|dtrigger8x:9|Q0' 
+-- Equation name is '_LC3_C10', type is buried 
+_LC3_C10 = DFFE( DI0,  _LC2_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:15' = '|registerfile:34|dtrigger8x:9|Q1' 
+-- Equation name is '_LC2_B16', type is buried 
+_LC2_B16 = DFFE( DI1,  _LC2_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:16' = '|registerfile:34|dtrigger8x:9|Q2' 
+-- Equation name is '_LC4_C10', type is buried 
+_LC4_C10 = DFFE( DI2,  _LC2_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:17' = '|registerfile:34|dtrigger8x:9|Q3' 
+-- Equation name is '_LC3_B11', type is buried 
+_LC3_B11 = DFFE( DI3,  _LC2_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:18' = '|registerfile:34|dtrigger8x:9|Q4' 
+-- Equation name is '_LC4_B16', type is buried 
+_LC4_B16 = DFFE( DI4,  _LC2_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:19' = '|registerfile:34|dtrigger8x:9|Q5' 
+-- Equation name is '_LC4_B11', type is buried 
+_LC4_B11 = DFFE( DI5,  _LC2_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:20' = '|registerfile:34|dtrigger8x:9|Q6' 
+-- Equation name is '_LC2_C18', type is buried 
+_LC2_C18 = DFFE( DI6,  _LC2_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:21' = '|registerfile:34|dtrigger8x:9|Q7' 
+-- Equation name is '_LC1_C18', type is buried 
+_LC1_C18 = DFFE( DI7,  _LC2_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:12' = '|registerfile:34|dtrigger8x:10|Q0' 
+-- Equation name is '_LC5_C10', type is buried 
+_LC5_C10 = DFFE( DI0,  _LC1_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:15' = '|registerfile:34|dtrigger8x:10|Q1' 
+-- Equation name is '_LC5_B16', type is buried 
+_LC5_B16 = DFFE( DI1,  _LC1_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:16' = '|registerfile:34|dtrigger8x:10|Q2' 
+-- Equation name is '_LC6_C10', type is buried 
+_LC6_C10 = DFFE( DI2,  _LC1_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:17' = '|registerfile:34|dtrigger8x:10|Q3' 
+-- Equation name is '_LC5_B11', type is buried 
+_LC5_B11 = DFFE( DI3,  _LC1_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:18' = '|registerfile:34|dtrigger8x:10|Q4' 
+-- Equation name is '_LC6_B16', type is buried 
+_LC6_B16 = DFFE( DI4,  _LC1_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:19' = '|registerfile:34|dtrigger8x:10|Q5' 
+-- Equation name is '_LC6_B11', type is buried 
+_LC6_B11 = DFFE( DI5,  _LC1_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:20' = '|registerfile:34|dtrigger8x:10|Q6' 
+-- Equation name is '_LC7_C15', type is buried 
+_LC7_C15 = DFFE( DI6,  _LC1_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:21' = '|registerfile:34|dtrigger8x:10|Q7' 
+-- Equation name is '_LC8_C15', type is buried 
+_LC8_C15 = DFFE( DI7,  _LC1_A13,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:12' = '|registerfile:34|dtrigger8x:11|Q0' 
+-- Equation name is '_LC4_C9', type is buried 
+_LC4_C9  = DFFE( DI0,  _LC7_A20,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:15' = '|registerfile:34|dtrigger8x:11|Q1' 
+-- Equation name is '_LC5_B22', type is buried 
+_LC5_B22 = DFFE( DI1,  _LC7_A20,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:16' = '|registerfile:34|dtrigger8x:11|Q2' 
+-- Equation name is '_LC5_C9', type is buried 
+_LC5_C9  = DFFE( DI2,  _LC7_A20,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:17' = '|registerfile:34|dtrigger8x:11|Q3' 
+-- Equation name is '_LC6_B10', type is buried 
+_LC6_B10 = DFFE( DI3,  _LC7_A20,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:18' = '|registerfile:34|dtrigger8x:11|Q4' 
+-- Equation name is '_LC6_B22', type is buried 
+_LC6_B22 = DFFE( DI4,  _LC7_A20,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:19' = '|registerfile:34|dtrigger8x:11|Q5' 
+-- Equation name is '_LC5_B10', type is buried 
+_LC5_B10 = DFFE( DI5,  _LC7_A20,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:20' = '|registerfile:34|dtrigger8x:11|Q6' 
+-- Equation name is '_LC5_C23', type is buried 
+_LC5_C23 = DFFE( DI6,  _LC7_A20,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:21' = '|registerfile:34|dtrigger8x:11|Q7' 
+-- Equation name is '_LC3_C23', type is buried 
+_LC3_C23 = DFFE( DI7,  _LC7_A20,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:12' = '|registerfile:34|dtrigger8x:12|Q0' 
+-- Equation name is '_LC1_C9', type is buried 
+_LC1_C9  = DFFE( DI0,  _LC1_A19,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:15' = '|registerfile:34|dtrigger8x:12|Q1' 
+-- Equation name is '_LC4_B22', type is buried 
+_LC4_B22 = DFFE( DI1,  _LC1_A19,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:16' = '|registerfile:34|dtrigger8x:12|Q2' 
+-- Equation name is '_LC2_C9', type is buried 
+_LC2_C9  = DFFE( DI2,  _LC1_A19,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:17' = '|registerfile:34|dtrigger8x:12|Q3' 
+-- Equation name is '_LC4_B10', type is buried 
+_LC4_B10 = DFFE( DI3,  _LC1_A19,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:18' = '|registerfile:34|dtrigger8x:12|Q4' 
+-- Equation name is '_LC3_B22', type is buried 
+_LC3_B22 = DFFE( DI4,  _LC1_A19,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:19' = '|registerfile:34|dtrigger8x:12|Q5' 
+-- Equation name is '_LC3_B10', type is buried 
+_LC3_B10 = DFFE( DI5,  _LC1_A19,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:20' = '|registerfile:34|dtrigger8x:12|Q6' 
+-- Equation name is '_LC2_C23', type is buried 
+_LC2_C23 = DFFE( DI6,  _LC1_A19,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:21' = '|registerfile:34|dtrigger8x:12|Q7' 
+-- Equation name is '_LC1_C23', type is buried 
+_LC1_C23 = DFFE( DI7,  _LC1_A19,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:12' = '|registerfile:34|dtrigger8x:13|Q0' 
+-- Equation name is '_LC4_C8', type is buried 
+_LC4_C8  = DFFE( DI0,  _LC1_A18,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:15' = '|registerfile:34|dtrigger8x:13|Q1' 
+-- Equation name is '_LC4_B24', type is buried 
+_LC4_B24 = DFFE( DI1,  _LC1_A18,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:16' = '|registerfile:34|dtrigger8x:13|Q2' 
+-- Equation name is '_LC3_C8', type is buried 
+_LC3_C8  = DFFE( DI2,  _LC1_A18,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:17' = '|registerfile:34|dtrigger8x:13|Q3' 
+-- Equation name is '_LC3_B9', type is buried 
+_LC3_B9  = DFFE( DI3,  _LC1_A18,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:18' = '|registerfile:34|dtrigger8x:13|Q4' 
+-- Equation name is '_LC3_B24', type is buried 
+_LC3_B24 = DFFE( DI4,  _LC1_A18,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:19' = '|registerfile:34|dtrigger8x:13|Q5' 
+-- Equation name is '_LC4_B9', type is buried 
+_LC4_B9  = DFFE( DI5,  _LC1_A18,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:20' = '|registerfile:34|dtrigger8x:13|Q6' 
+-- Equation name is '_LC1_C24', type is buried 
+_LC1_C24 = DFFE( DI6,  _LC1_A18,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:21' = '|registerfile:34|dtrigger8x:13|Q7' 
+-- Equation name is '_LC2_C24', type is buried 
+_LC2_C24 = DFFE( DI7,  _LC1_A18,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:12' = '|registerfile:34|dtrigger8x:14|Q0' 
+-- Equation name is '_LC5_C8', type is buried 
+_LC5_C8  = DFFE( DI0,  _LC2_A17,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:15' = '|registerfile:34|dtrigger8x:14|Q1' 
+-- Equation name is '_LC6_B24', type is buried 
+_LC6_B24 = DFFE( DI1,  _LC2_A17,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:16' = '|registerfile:34|dtrigger8x:14|Q2' 
+-- Equation name is '_LC6_C8', type is buried 
+_LC6_C8  = DFFE( DI2,  _LC2_A17,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:17' = '|registerfile:34|dtrigger8x:14|Q3' 
+-- Equation name is '_LC6_B9', type is buried 
+_LC6_B9  = DFFE( DI3,  _LC2_A17,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:18' = '|registerfile:34|dtrigger8x:14|Q4' 
+-- Equation name is '_LC5_B24', type is buried 
+_LC5_B24 = DFFE( DI4,  _LC2_A17,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:19' = '|registerfile:34|dtrigger8x:14|Q5' 
+-- Equation name is '_LC5_B9', type is buried 
+_LC5_B9  = DFFE( DI5,  _LC2_A17,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:20' = '|registerfile:34|dtrigger8x:14|Q6' 
+-- Equation name is '_LC5_C24', type is buried 
+_LC5_C24 = DFFE( DI6,  _LC2_A17,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:21' = '|registerfile:34|dtrigger8x:14|Q7' 
+-- Equation name is '_LC4_C24', type is buried 
+_LC4_C24 = DFFE( DI7,  _LC2_A17,  VCC,  VCC,  VCC);
+
+-- Node name is '|registerfile:34|dtrigger8x:18|:12' = '|registerfile:34|dtrigger8x:18|Q0' 
+-- Equation name is '_LC6_C2', type is buried 
+_LC6_C2  = DFFE( _EQ003, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ003 =  _LC1_C8 &  _LC7_C9 &  _LC7_C21
+         #  _LC2_C2;
+
+-- Node name is '|registerfile:34|dtrigger8x:18|:15' = '|registerfile:34|dtrigger8x:18|Q1' 
+-- Equation name is '_LC6_B14', type is buried 
+_LC6_B14 = DFFE( _EQ004, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ004 =  _LC1_B22 &  _LC1_B24 &  _LC7_C21
+         #  _LC1_B14;
+
+-- Node name is '|registerfile:34|dtrigger8x:18|:16' = '|registerfile:34|dtrigger8x:18|Q2' 
+-- Equation name is '_LC5_C2', type is buried 
+_LC5_C2  = DFFE( _EQ005, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ005 =  _LC2_C8 &  _LC3_C9 &  _LC7_C21
+         #  _LC1_C2;
+
+-- Node name is '|registerfile:34|dtrigger8x:18|:17' = '|registerfile:34|dtrigger8x:18|Q3' 
+-- Equation name is '_LC4_B1', type is buried 
+_LC4_B1  = DFFE( _EQ006, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ006 =  _LC1_B10 &  _LC2_B9 &  _LC7_C21
+         #  _LC1_B1;
+
+-- Node name is '|registerfile:34|dtrigger8x:18|:18' = '|registerfile:34|dtrigger8x:18|Q4' 
+-- Equation name is '_LC5_B14', type is buried 
+_LC5_B14 = DFFE( _EQ007, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ007 =  _LC2_B22 &  _LC2_B24 &  _LC7_C21
+         #  _LC2_B14;
+
+-- Node name is '|registerfile:34|dtrigger8x:18|:19' = '|registerfile:34|dtrigger8x:18|Q5' 
+-- Equation name is '_LC8_B1', type is buried 
+_LC8_B1  = DFFE( _EQ008, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ008 =  _LC1_B9 &  _LC2_B10 &  _LC7_C21
+         #  _LC2_B1;
+
+-- Node name is '|registerfile:34|dtrigger8x:18|:20' = '|registerfile:34|dtrigger8x:18|Q6' 
+-- Equation name is '_LC4_C15', type is buried 
+_LC4_C15 = DFFE( _EQ009, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ009 =  _LC3_C24 &  _LC4_C23 &  _LC7_C21
+         #  _LC2_C15;
+
+-- Node name is '|registerfile:34|dtrigger8x:18|:21' = '|registerfile:34|dtrigger8x:18|Q7' 
+-- Equation name is '_LC5_C15', type is buried 
+_LC5_C15 = DFFE( _EQ010, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ010 =  _LC6_C24 &  _LC7_C21 &  _LC8_C23
+         #  _LC6_C15;
+
+-- Node name is '|registerfile:34|LPM_DECODE:6|declut:decoder|anode0_3' from file "declut.tdf" line 77, column 52
+-- Equation name is '_LC3_A16', type is buried 
+_LC3_A16 = LCELL( _EQ011);
+  _EQ011 =  _LC1_A21 &  _LC1_A23 &  _LC1_A24 &  WR;
+
+-- Node name is '|registerfile:34|LPM_DECODE:6|declut:decoder|anode1_3' from file "declut.tdf" line 77, column 52
+-- Equation name is '_LC3_A13', type is buried 
+_LC3_A13 = LCELL( _EQ012);
+  _EQ012 = !_LC1_A21 & !_LC1_A23 & !_LC1_A24 &  WR;
+
+-- Node name is '|registerfile:34|LPM_DECODE:6|declut:decoder|anode2_3' from file "declut.tdf" line 77, column 52
+-- Equation name is '_LC2_A13', type is buried 
+_LC2_A13 = LCELL( _EQ013);
+  _EQ013 =  _LC1_A21 & !_LC1_A23 & !_LC1_A24 &  WR;
+
+-- Node name is '|registerfile:34|LPM_DECODE:6|declut:decoder|anode3_3' from file "declut.tdf" line 77, column 52
+-- Equation name is '_LC1_A13', type is buried 
+_LC1_A13 = LCELL( _EQ014);
+  _EQ014 = !_LC1_A21 & !_LC1_A23 &  _LC1_A24 &  WR;
+
+-- Node name is '|registerfile:34|LPM_DECODE:6|declut:decoder|anode4_3' from file "declut.tdf" line 79, column 52
+-- Equation name is '_LC7_A20', type is buried 
+_LC7_A20 = LCELL( _EQ015);
+  _EQ015 =  _LC1_A21 & !_LC1_A23 &  _LC1_A24 &  WR;
+
+-- Node name is '|registerfile:34|LPM_DECODE:6|declut:decoder|anode5_3' from file "declut.tdf" line 79, column 52
+-- Equation name is '_LC1_A19', type is buried 
+_LC1_A19 = LCELL( _EQ016);
+  _EQ016 = !_LC1_A21 &  _LC1_A23 & !_LC1_A24 &  WR;
+
+-- Node name is '|registerfile:34|LPM_DECODE:6|declut:decoder|anode6_3' from file "declut.tdf" line 79, column 52
+-- Equation name is '_LC1_A18', type is buried 
+_LC1_A18 = LCELL( _EQ017);
+  _EQ017 =  _LC1_A21 &  _LC1_A23 & !_LC1_A24 &  WR;
+
+-- Node name is '|registerfile:34|LPM_DECODE:6|declut:decoder|anode7_3' from file "declut.tdf" line 79, column 52
+-- Equation name is '_LC2_A17', type is buried 
+_LC2_A17 = LCELL( _EQ018);
+  _EQ018 = !_LC1_A21 &  _LC1_A23 &  _LC1_A24 &  WR;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:135|muxlut:43|~44~1' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC1_C10', type is buried 
+-- synthesized logic cell 
+_LC1_C10 = LCELL( _EQ019);
+  _EQ019 =  _LC1_A3 &  _LC5_C10
+         # !_LC1_A3 &  _LC3_C10;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:135|muxlut:43|~49~1' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC1_C12', type is buried 
+-- synthesized logic cell 
+_LC1_C12 = LCELL( _EQ020);
+  _EQ020 =  _LC1_A3 &  _LC5_C12
+         # !_LC1_A3 &  _LC3_C12;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:135|muxlut:60|:44' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC1_C8', type is buried 
+_LC1_C8  = LCELL( _EQ021);
+  _EQ021 =  _LC1_A3 &  _LC5_C8
+         # !_LC1_A3 &  _LC4_C8
+         # !_LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:135|muxlut:60|:49' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC7_C9', type is buried 
+_LC7_C9  = LCELL( _EQ022);
+  _EQ022 =  _LC1_A3 &  _LC1_C9
+         # !_LC1_A3 &  _LC4_C9
+         #  _LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:135|muxlut:77|:37' from file "muxlut.tdf" line 128, column 30
+-- Equation name is '_LC2_C2', type is buried 
+_LC2_C2  = LCELL( _EQ023);
+  _EQ023 = !_LC1_A5 &  _LC1_C12 & !_LC7_C21
+         #  _LC1_C10 &  _LC1_C12 & !_LC7_C21
+         #  _LC1_A5 &  _LC1_C10 & !_LC7_C21;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:156|muxlut:43|~44~1' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC1_B16', type is buried 
+-- synthesized logic cell 
+_LC1_B16 = LCELL( _EQ024);
+  _EQ024 =  _LC1_A3 &  _LC5_B16
+         # !_LC1_A3 &  _LC2_B16;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:156|muxlut:43|~49~1' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC1_B23', type is buried 
+-- synthesized logic cell 
+_LC1_B23 = LCELL( _EQ025);
+  _EQ025 =  _LC1_A3 &  _LC5_B23
+         # !_LC1_A3 &  _LC2_B23;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:156|muxlut:60|:44' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC1_B24', type is buried 
+_LC1_B24 = LCELL( _EQ026);
+  _EQ026 =  _LC1_A3 &  _LC6_B24
+         # !_LC1_A3 &  _LC4_B24
+         # !_LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:156|muxlut:60|:49' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC1_B22', type is buried 
+_LC1_B22 = LCELL( _EQ027);
+  _EQ027 =  _LC1_A3 &  _LC4_B22
+         # !_LC1_A3 &  _LC5_B22
+         #  _LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:156|muxlut:77|:37' from file "muxlut.tdf" line 128, column 30
+-- Equation name is '_LC1_B14', type is buried 
+_LC1_B14 = LCELL( _EQ028);
+  _EQ028 =  _LC1_B16 &  _LC1_B23 & !_LC7_C21
+         #  _LC1_A5 &  _LC1_B16 & !_LC7_C21
+         # !_LC1_A5 &  _LC1_B23 & !_LC7_C21;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:177|muxlut:43|~44~1' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC2_C10', type is buried 
+-- synthesized logic cell 
+_LC2_C10 = LCELL( _EQ029);
+  _EQ029 =  _LC1_A3 &  _LC6_C10
+         # !_LC1_A3 &  _LC4_C10;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:177|muxlut:43|~49~1' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC2_C12', type is buried 
+-- synthesized logic cell 
+_LC2_C12 = LCELL( _EQ030);
+  _EQ030 =  _LC1_A3 &  _LC6_C12
+         # !_LC1_A3 &  _LC4_C12;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:177|muxlut:60|:44' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC2_C8', type is buried 
+_LC2_C8  = LCELL( _EQ031);
+  _EQ031 =  _LC1_A3 &  _LC6_C8
+         # !_LC1_A3 &  _LC3_C8
+         # !_LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:177|muxlut:60|:49' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC3_C9', type is buried 
+_LC3_C9  = LCELL( _EQ032);
+  _EQ032 =  _LC1_A3 &  _LC2_C9
+         # !_LC1_A3 &  _LC5_C9
+         #  _LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:177|muxlut:77|:37' from file "muxlut.tdf" line 128, column 30
+-- Equation name is '_LC1_C2', type is buried 
+_LC1_C2  = LCELL( _EQ033);
+  _EQ033 =  _LC2_C10 &  _LC2_C12 & !_LC7_C21
+         #  _LC1_A5 &  _LC2_C10 & !_LC7_C21
+         # !_LC1_A5 &  _LC2_C12 & !_LC7_C21;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:198|muxlut:43|~44~1' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC2_B11', type is buried 
+-- synthesized logic cell 
+_LC2_B11 = LCELL( _EQ034);
+  _EQ034 =  _LC1_A3 &  _LC5_B11
+         # !_LC1_A3 &  _LC3_B11;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:198|muxlut:43|~49~1' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC2_B8', type is buried 
+-- synthesized logic cell 
+_LC2_B8  = LCELL( _EQ035);
+  _EQ035 =  _LC1_A3 &  _LC6_B8
+         # !_LC1_A3 &  _LC4_B8;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:198|muxlut:60|:44' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC2_B9', type is buried 
+_LC2_B9  = LCELL( _EQ036);
+  _EQ036 =  _LC1_A3 &  _LC6_B9
+         # !_LC1_A3 &  _LC3_B9
+         # !_LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:198|muxlut:60|:49' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC1_B10', type is buried 
+_LC1_B10 = LCELL( _EQ037);
+  _EQ037 =  _LC1_A3 &  _LC4_B10
+         # !_LC1_A3 &  _LC6_B10
+         #  _LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:198|muxlut:77|:37' from file "muxlut.tdf" line 128, column 30
+-- Equation name is '_LC1_B1', type is buried 
+_LC1_B1  = LCELL( _EQ038);
+  _EQ038 =  _LC2_B8 &  _LC2_B11 & !_LC7_C21
+         #  _LC1_A5 &  _LC2_B11 & !_LC7_C21
+         # !_LC1_A5 &  _LC2_B8 & !_LC7_C21;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:219|muxlut:43|~44~1' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC3_B16', type is buried 
+-- synthesized logic cell 
+_LC3_B16 = LCELL( _EQ039);
+  _EQ039 =  _LC1_A3 &  _LC6_B16
+         # !_LC1_A3 &  _LC4_B16;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:219|muxlut:43|~49~1' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC3_B23', type is buried 
+-- synthesized logic cell 
+_LC3_B23 = LCELL( _EQ040);
+  _EQ040 =  _LC1_A3 &  _LC6_B23
+         # !_LC1_A3 &  _LC4_B23;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:219|muxlut:60|:44' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC2_B24', type is buried 
+_LC2_B24 = LCELL( _EQ041);
+  _EQ041 =  _LC1_A3 &  _LC5_B24
+         # !_LC1_A3 &  _LC3_B24
+         # !_LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:219|muxlut:60|:49' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC2_B22', type is buried 
+_LC2_B22 = LCELL( _EQ042);
+  _EQ042 =  _LC1_A3 &  _LC3_B22
+         # !_LC1_A3 &  _LC6_B22
+         #  _LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:219|muxlut:77|:37' from file "muxlut.tdf" line 128, column 30
+-- Equation name is '_LC2_B14', type is buried 
+_LC2_B14 = LCELL( _EQ043);
+  _EQ043 =  _LC3_B16 &  _LC3_B23 & !_LC7_C21
+         #  _LC1_A5 &  _LC3_B16 & !_LC7_C21
+         # !_LC1_A5 &  _LC3_B23 & !_LC7_C21;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:240|muxlut:43|~44~1' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC1_B11', type is buried 
+-- synthesized logic cell 
+_LC1_B11 = LCELL( _EQ044);
+  _EQ044 =  _LC1_A3 &  _LC6_B11
+         # !_LC1_A3 &  _LC4_B11;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:240|muxlut:43|~49~1' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC1_B8', type is buried 
+-- synthesized logic cell 
+_LC1_B8  = LCELL( _EQ045);
+  _EQ045 =  _LC1_A3 &  _LC3_B8
+         # !_LC1_A3 &  _LC5_B8;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:240|muxlut:60|:44' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC1_B9', type is buried 
+_LC1_B9  = LCELL( _EQ046);
+  _EQ046 =  _LC1_A3 &  _LC5_B9
+         # !_LC1_A3 &  _LC4_B9
+         # !_LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:240|muxlut:60|:49' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC2_B10', type is buried 
+_LC2_B10 = LCELL( _EQ047);
+  _EQ047 =  _LC1_A3 &  _LC3_B10
+         # !_LC1_A3 &  _LC5_B10
+         #  _LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:240|muxlut:77|:37' from file "muxlut.tdf" line 128, column 30
+-- Equation name is '_LC2_B1', type is buried 
+_LC2_B1  = LCELL( _EQ048);
+  _EQ048 =  _LC1_B8 &  _LC1_B11 & !_LC7_C21
+         #  _LC1_A5 &  _LC1_B11 & !_LC7_C21
+         # !_LC1_A5 &  _LC1_B8 & !_LC7_C21;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:261|muxlut:43|~44~1' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC1_C15', type is buried 
+-- synthesized logic cell 
+_LC1_C15 = LCELL( _EQ049);
+  _EQ049 =  _LC1_A3 &  _LC7_C15
+         # !_LC1_A3 &  _LC2_C18;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:261|muxlut:43|~49~1' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC3_C17', type is buried 
+-- synthesized logic cell 
+_LC3_C17 = LCELL( _EQ050);
+  _EQ050 =  _LC1_A3 &  _LC2_C17
+         # !_LC1_A3 &  _LC4_C17;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:261|muxlut:60|:44' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC3_C24', type is buried 
+_LC3_C24 = LCELL( _EQ051);
+  _EQ051 =  _LC1_A3 &  _LC5_C24
+         # !_LC1_A3 &  _LC1_C24
+         # !_LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:261|muxlut:60|:49' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC4_C23', type is buried 
+_LC4_C23 = LCELL( _EQ052);
+  _EQ052 =  _LC1_A3 &  _LC2_C23
+         # !_LC1_A3 &  _LC5_C23
+         #  _LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:261|muxlut:77|:37' from file "muxlut.tdf" line 128, column 30
+-- Equation name is '_LC2_C15', type is buried 
+_LC2_C15 = LCELL( _EQ053);
+  _EQ053 =  _LC1_C15 &  _LC3_C17 & !_LC7_C21
+         #  _LC1_A5 &  _LC1_C15 & !_LC7_C21
+         # !_LC1_A5 &  _LC3_C17 & !_LC7_C21;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:282|muxlut:43|~44~1' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC3_C15', type is buried 
+-- synthesized logic cell 
+_LC3_C15 = LCELL( _EQ054);
+  _EQ054 =  _LC1_A3 &  _LC8_C15
+         # !_LC1_A3 &  _LC1_C18;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:282|muxlut:43|~49~1' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC6_C17', type is buried 
+-- synthesized logic cell 
+_LC6_C17 = LCELL( _EQ055);
+  _EQ055 =  _LC1_A3 &  _LC1_C17
+         # !_LC1_A3 &  _LC5_C17;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:282|muxlut:60|:44' from file "muxlut.tdf" line 171, column 56
+-- Equation name is '_LC6_C24', type is buried 
+_LC6_C24 = LCELL( _EQ056);
+  _EQ056 =  _LC1_A3 &  _LC4_C24
+         # !_LC1_A3 &  _LC2_C24
+         # !_LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:282|muxlut:60|:49' from file "muxlut.tdf" line 172, column 50
+-- Equation name is '_LC8_C23', type is buried 
+_LC8_C23 = LCELL( _EQ057);
+  _EQ057 =  _LC1_A3 &  _LC1_C23
+         # !_LC1_A3 &  _LC3_C23
+         #  _LC1_A5;
+
+-- Node name is '|registerfile:34|LPM_MUX:19|muxlut:282|muxlut:77|:37' from file "muxlut.tdf" line 128, column 30
+-- Equation name is '_LC6_C15', type is buried 
+_LC6_C15 = LCELL( _EQ058);
+  _EQ058 =  _LC3_C15 &  _LC6_C17 & !_LC7_C21
+         #  _LC1_A5 &  _LC3_C15 & !_LC7_C21
+         # !_LC1_A5 &  _LC6_C17 & !_LC7_C21;
+
+-- Node name is ':55' 
+-- Equation name is '_LC4_A7', type is buried 
+_LC4_A7  = LCELL( _EQ059);
+  _EQ059 =  RD
+         #  WR;
+
+-- Node name is ':58' 
+-- Equation name is '_LC6_A4', type is buried 
+_LC6_A4  = LCELL( _EQ060);
+  _EQ060 =  _LC1_A7 &  _LC2_A7 &  _LC3_A7;
+
+-- Node name is ':65' 
+-- Equation name is '_LC5_A6', type is buried 
+_LC5_A6  = LCELL( _EQ061);
+  _EQ061 = !_LC1_A7 & !_LC2_A7 & !_LC3_A7;
+
+
+
+Project Information                              c:\max2work\fifolifo\lifo.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Multi-Level
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'FLEX10K' family
+
+      CARRY_CHAIN                         = ignore
+      CARRY_CHAIN_LENGTH                  = 32
+      CASCADE_CHAIN                       = ignore
+      CASCADE_CHAIN_LENGTH                = 2
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SUBFACTOR_EXTRACTION                = on
+      IGNORE_SOFT_BUFFERS                 = on
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:00
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 13,775K
