@@ -1,0 +1,82 @@
+m255
+13
+cModel Technology
+dC:\HDS\my_project\TINER_Vlog\work
+vBCDCounter
+INb8i?<71W>TKG1Z3=V8nR2
+V1khN]11z7kW7o4hWH3WOc2
+w1556994581
+FC:/HDS/my_project/TINER_Vlog/hdl/DCDCounter.v
+L0 1
+V1khN]11z7kW7o4hWH3WOc2
+OE;L;6.1c;31
+r1
+31
+o-work C:/HDS/my_project/TINER_Vlog/work -nologo
+tGenerateLoopIterationMax 100000
+n@b@c@d@counter
+vControl
+I><XA4[_Z`7bj0_2SSZ?SK2
+VW?QGVdlO>YB<_1Jk5[54e0
+w1556993965
+FC:/HDS/my_project/TINER_Vlog/hdl/control_fsm.v
+L0 12
+VW?QGVdlO>YB<_1Jk5[54e0
+OE;L;6.1c;31
+r1
+31
+o-work C:/HDS/my_project/TINER_Vlog/work -nologo
+tGenerateLoopIterationMax 100000
+n@control
+vCounter
+I67G09Gk6<]^VZL]aPHk`80
+VgPYHekC?hIRmc0kS2zd:X2
+w1556996151
+FC:/HDS/my_project/TINER_Vlog/hdl/counter_struct.v
+L0 13
+VgPYHekC?hIRmc0kS2zd:X2
+OE;L;6.1c;31
+r1
+31
+o-work C:/HDS/my_project/TINER_Vlog/work -nologo
+tGenerateLoopIterationMax 100000
+n@counter
+vTIMER
+I4iAV?ikSlcRSY[0_QT@nQ2
+V5z3mWA]9ozeZ7l0^5ANbP3
+w1556996151
+FC:/HDS/my_project/TINER_Vlog/hdl/timer_struct.v
+L0 13
+V5z3mWA]9ozeZ7l0^5ANbP3
+OE;L;6.1c;31
+r1
+31
+o-work C:/HDS/my_project/TINER_Vlog/work -nologo
+tGenerateLoopIterationMax 100000
+n@t@i@m@e@r
+vTIMER_tb
+IoNA2?QgY_[df9Q:MidleA1
+VOH7ohY9TolOOmS^?N:lFd0
+w1556997996
+FC:/HDS/my_project/TINER_Vlog/hdl/timer_tb_struct.v
+L0 13
+VOH7ohY9TolOOmS^?N:lFd0
+OE;L;6.1c;31
+r1
+31
+o-work C:/HDS/my_project/TINER_Vlog/work -nologo
+tGenerateLoopIterationMax 100000
+n@t@i@m@e@r_tb
+vTIMER_tester
+IBBFHX@JG[IaJC6ff7URVn3
+V901NZO_lf<RSJ?Q1ZQa4N3
+w1556997996
+FC:/HDS/my_project/TINER_Vlog/hdl/timer_tester_flow.v
+L0 13
+V901NZO_lf<RSJ?Q1ZQa4N3
+OE;L;6.1c;31
+r1
+31
+o-work C:/HDS/my_project/TINER_Vlog/work -nologo
+tGenerateLoopIterationMax 100000
+n@t@i@m@e@r_tester

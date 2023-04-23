@@ -1,0 +1,17 @@
+//
+// Verilog Module TINER_Vlog.DCDCounter
+//
+// Created:
+//          by - User.UNKNOWN (VBOX)
+//          at - 23:28:52 04.05.2019
+//
+// using Mentor Graphics HDL Designer(TM) 2005.3 (Build 75)
+//
+`resetall
+`timescale 1ns/10ps
+module DCDCounter ;
+
+
+// ### Please start your Verilog code here ### 
+
+endmodule

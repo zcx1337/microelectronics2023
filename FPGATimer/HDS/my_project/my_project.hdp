@@ -1,0 +1,18 @@
+[Leonardo]
+TINER_Vlog = $HDS_PROJECT_DIR\TINER_Vlog\ls
+[ModelSim]
+TINER_Vlog = $HDS_PROJECT_DIR\TINER_Vlog\work
+[hdl]
+my_project_lib = $HDS_PROJECT_DIR/my_project_lib/hdl
+TINER_Vlog = $HDS_PROJECT_DIR/TINER_Vlog/hdl
+[hds]
+my_project_lib = $HDS_PROJECT_DIR/my_project_lib/hds
+TINER_Vlog = $HDS_PROJECT_DIR/TINER_Vlog/hds
+[hds_settings]
+default_library = TINER_Vlog
+version = 1
+[library_type]
+my_project_lib = regular
+TINER_Vlog = regular
+[shared]
+others = $HDS_TEAM_HOME/shared.hdp

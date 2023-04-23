@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom TIMER_tester
+DEFAULT_FILE atom @t@i@m@e@r_tester/flow.fc

@@ -1,0 +1,9 @@
+#
+#
+# 
+# 05/07/19 18:11:19
+set_working_dir C:/HDS/my_project/TINER_Vlog/ls/TIMER/netlists
+source C:/FPGAdv72LS/Hds/resources/misc/RunSpectrum.tcl
+source "C:/HDS/my_project/TINER_Vlog/ls/TIMER_tb/scripts/spectrum.tcl"
+### Previous Command Failed
+

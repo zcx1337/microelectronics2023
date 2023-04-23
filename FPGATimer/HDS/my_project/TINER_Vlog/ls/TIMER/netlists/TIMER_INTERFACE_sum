@@ -1,0 +1,61 @@
+
+*******************************************************
+
+Cell: TIMER    View: INTERFACE    Library: tiner_vlog
+
+*******************************************************
+
+
+ Cell       Library  References     Total Area
+
+AND2        apa            1 x      1      1 Core Cells
+AO21        apa            1 x      1      1 Core Cells
+AO21FTF     apa            6 x      1      6 Core Cells
+AO21FTT     apa            2 x      1      2 Core Cells
+AOI21FTF    apa            5 x      1      5 Core Cells
+AOI21TTF    apa            1 x      1      1 Core Cells
+Counter     tiner_vlog     1 x     74     74 Core Cells
+DFFLC       apa            4 x      1      4 Core Cells
+IB33        apa           14 x
+LD          apa            3 x      1      3 Core Cells
+NAND2FT     apa            1 x      1      1 Core Cells
+NAND3       apa            2 x      1      2 Core Cells
+NOR2        apa            5 x      1      5 Core Cells
+NOR2FT      apa            5 x      1      5 Core Cells
+NOR3FFT     apa            3 x      1      3 Core Cells
+NOR3FTT     apa            5 x      1      5 Core Cells
+OA21        apa            1 x      1      1 Core Cells
+OAI21       apa            1 x      1      1 Core Cells
+OB33PH      apa            9 x
+OR2         apa            2 x      1      2 Core Cells
+OR3         apa            1 x      1      1 Core Cells
+OR3FFT      apa            3 x      1      3 Core Cells
+OR3FTT      apa            4 x      1      4 Core Cells
+
+ Number of ports :                      23
+ Number of nets :                      102
+ Number of instances :                  80
+ Number of references to this view :     0
+
+Total accumulated area : 
+ Number of Core Cells :                130
+ Number of accumulated instances :     155
+***********************************************
+Device Utilization for apa075pqfp208
+***********************************************
+Resource                Used    Avail   Utilization
+-----------------------------------------------
+IOs                     23      158      14.56%
+Core Cells              130     3072      4.23%
+
+-----------------------------------------------
+Using wire table: APA
+
+
+
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clk                  : 92.8 MHz

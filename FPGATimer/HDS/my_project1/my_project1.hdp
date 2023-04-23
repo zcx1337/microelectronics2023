@@ -1,0 +1,11 @@
+[hdl]
+my_project1_lib = $HDS_PROJECT_DIR\my_project1_lib\hdl
+[hds]
+my_project1_lib = $HDS_PROJECT_DIR\my_project1_lib\hds
+[hds_settings]
+default_library = my_project1_lib
+version = 1
+[library_type]
+my_project1_lib = regular
+[shared]
+others = $HDS_TEAM_HOME/shared.hdp

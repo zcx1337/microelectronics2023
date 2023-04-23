@@ -1,0 +1,28 @@
+# //  ModelSim SE 6.1c Nov 17 2005 
+# //
+# //  Copyright Mentor Graphics Corporation 2005
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -L TINER_Vlog -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit C:/FPGAdv72LS/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli C:/FPGAdv72LS/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll TINER_Vlog.TIMER_tb 
+# Loading C:/FPGAdv72LS/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading C:\HDS\my_project/TINER_Vlog/work.TIMER_tb
+# Loading C:\HDS\my_project/TINER_Vlog/work.TIMER
+# Loading C:\HDS\my_project/TINER_Vlog/work.Control
+# Loading C:\HDS\my_project/TINER_Vlog/work.Counter
+# Loading C:\HDS\my_project/TINER_Vlog/work.BCDCounter
+# Loading C:\HDS\my_project/TINER_Vlog/work.TIMER_tester
+add wave sim:/TIMER_tb/*
+# ** Warning: (vsim-WLF-5000) Log file vsim.wlf currently in use.
+# File in use by: User  Hostname: VBOX  ProcessID: 1568
+#           Attempting to use alternate file "C:\DOCUME~1\User\LOCALS~1\Temp\wlft5".
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using C:\DOCUME~1\User\LOCALS~1\Temp\wlft5 instead.
+run -all
+# Decoder or Load failure.
+# Count did not suspend
+# Timer test completed
+# Break at C:/HDS/my_project/TINER_Vlog/hdl/timer_tester_flow.v line 125

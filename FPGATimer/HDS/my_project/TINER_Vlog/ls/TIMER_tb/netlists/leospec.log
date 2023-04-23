@@ -1,0 +1,48 @@
+LeonardoSpectrum Level 3 - 2005b.24 (Release Production Release, compiled Nov 10 2005 at 16:21:33)
+Copyright 1990-2005 Mentor Graphics.  All rights reserved.
+Portions copyright 1991-2005 Compuware Corporation
+
+--
+-- Welcome to LeonardoSpectrum Level 3
+-- Run By User@VBOX
+-- Run Started On Tue May 07 18:11:19 HDT 2019
+--
+Info, Working Directory is now 'C:/HDS/my_project/TINER_Vlog/ls/TIMER_tb/netlists'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+Info: setting register2register to 25.00000
+Info: setting input2register to 25.00000
+Info: setting register2output to 25.00000
+Info: setting input2output to 25.00000
+Info: setting part to apa075pqfp208
+Info: setting process to F
+Info: setting wire_table to APA
+Reading library file `C:\FPGAdv72LS\Exemplar\\lib\apa.syn`...
+Library version = 6b2.5
+Delays assume: Process=F Temp= 25.0 C  Voltage=2.50 V  
+Warning: Could not find process parameter (F_process) value in library.
+Info: setting encoding to auto
+-- Reading module generator description from file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd
+-- Reading vhdl file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd into library OPERATORS
+-- Modgen File 1.vhd Version 1.0
+-- Searching for SYNOPSYS package std_logic_arith..
+Info: setting append_generics_to_toplevel to FALSE
+-- Reading file 'C:\HDS\my_project/TINER_Vlog/hdl/control_fsm.v'...
+-- Reading file 'C:\HDS\my_project/TINER_Vlog/hdl/DCDCounter.v'...
+-- Reading file 'C:\HDS\my_project/TINER_Vlog/hdl/counter_struct.v'...
+-- Reading file 'C:\HDS\my_project/TINER_Vlog/hdl/timer_struct.v'...
+-- Reading file 'C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v'...
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 57: Warning, initial statement not supported. Ignored
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 82: Warning, system task enable ignored for synthesis
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 100: Warning, system task enable ignored for synthesis
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 103: Error, wait statement not supported
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 106: Warning, system task enable ignored for synthesis
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 110: Warning, system task enable ignored for synthesis
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 115: Warning, system task enable ignored for synthesis
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 124: Warning, system task enable ignored for synthesis
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 125: Warning, system task enable ignored for synthesis
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 127: Warning, initial statement not supported. Ignored
+"C:\HDS\my_project/TINER_Vlog/hdl/timer_tester_flow.v", line 135: Warning, initial statement not supported. Ignored
+-- Reading file 'C:\HDS\my_project/TINER_Vlog/hdl/timer_tb_struct.v'...
+Error(s) found in Verilog source.
+
