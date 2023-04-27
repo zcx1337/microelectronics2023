@@ -1,0 +1,439 @@
+Analysis & Synthesis report for laba633
+Tue Apr 16 15:42:03 2019
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
+ 10. Parameter Settings for Inferred Entity Instance: lpm_divide:div_rtl_0
+ 11. Parameter Settings for Inferred Entity Instance: lpm_mult:mult_rtl_1
+ 12. lpm_mult Parameter Settings by Entity Instance
+ 13. Analysis & Synthesis Equations
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Apr 16 15:42:03 2019    ;
+; Quartus II Version          ; 5.0 Build 148 04/26/2005 SJ Full Version ;
+; Revision Name               ; laba633                                  ;
+; Top-level Entity Name       ; ALU                                      ;
+; Family                      ; Stratix                                  ;
+; Total logic elements        ; 135                                      ;
+; Total pins                  ; 23                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; DSP block 9-bit elements    ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
+; Total DLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                     ;
++--------------------------------------------------------------------+--------------+---------------+
+; Option                                                             ; Setting      ; Default Value ;
++--------------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                              ; ALU          ; laba633       ;
+; Family name                                                        ; Stratix      ; Stratix       ;
+; Use smart compilation                                              ; Off          ; Off           ;
+; Restructure Multiplexers                                           ; Auto         ; Auto          ;
+; Create Debugging Nodes for IP Cores                                ; off          ; off           ;
+; Preserve fewer node names                                          ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                          ; Off          ; Off           ;
+; Verilog Version                                                    ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                       ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                           ; Auto         ; Auto          ;
+; Extract Verilog State Machines                                     ; On           ; On            ;
+; Extract VHDL State Machines                                        ; On           ; On            ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On           ; On            ;
+; DSP Block Balancing                                                ; Auto         ; Auto          ;
+; Maximum DSP Block Usage                                            ; -1           ; -1            ;
+; NOT Gate Push-Back                                                 ; On           ; On            ;
+; Power-Up Don't Care                                                ; On           ; On            ;
+; Remove Redundant Logic Cells                                       ; Off          ; Off           ;
+; Remove Duplicate Registers                                         ; On           ; On            ;
+; Ignore CARRY Buffers                                               ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                             ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                              ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore LCELL Buffers                                               ; Off          ; Off           ;
+; Ignore SOFT Buffers                                                ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                     ; Off          ; Off           ;
+; Optimization Technique -- Stratix/Stratix GX                       ; Balanced     ; Balanced      ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70           ; 70            ;
+; Auto Carry Chains                                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                               ; On           ; On            ;
+; Remove Duplicate Logic                                             ; On           ; On            ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off          ; Off           ;
+; Perform gate-level register retiming                               ; Off          ; Off           ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On           ; On            ;
+; Auto ROM Replacement                                               ; On           ; On            ;
+; Auto RAM Replacement                                               ; On           ; On            ;
+; Auto DSP Block Replacement                                         ; On           ; On            ;
+; Auto Shift Register Replacement                                    ; On           ; On            ;
+; Auto Clock Enable Replacement                                      ; On           ; On            ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On           ; On            ;
+; Auto RAM Block Balancing                                           ; On           ; On            ;
+; Auto Resource Sharing                                              ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any Shift Register Size For Recognition                      ; Off          ; Off           ;
+; Maximum Number of M512 Memory Blocks                               ; -1           ; -1            ;
+; Maximum Number of M4K Memory Blocks                                ; -1           ; -1            ;
+; Maximum Number of M-RAM Memory Blocks                              ; -1           ; -1            ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On           ; On            ;
++--------------------------------------------------------------------+--------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
+; Alu.v                            ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/User/Desktop/ALU/Alu.v                      ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/lpm_divide.tdf            ;
+; abs_divider.inc                  ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/abs_divider.inc           ;
+; sign_div_unsign.inc              ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/sign_div_unsign.inc       ;
+; aglobal50.inc                    ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/aglobal50.inc             ;
+; db/lpm_divide_imf.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/User/Desktop/ALU/db/lpm_divide_imf.tdf      ;
+; db/sign_div_unsign_ihg.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/User/Desktop/ALU/db/sign_div_unsign_ihg.tdf ;
+; db/alt_u_div_bmd.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/User/Desktop/ALU/db/alt_u_div_bmd.tdf       ;
+; db/add_sub_mf8.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/User/Desktop/ALU/db/add_sub_mf8.tdf         ;
+; db/add_sub_nf8.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/User/Desktop/ALU/db/add_sub_nf8.tdf         ;
+; db/add_sub_of8.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/User/Desktop/ALU/db/add_sub_of8.tdf         ;
+; db/add_sub_pf8.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/User/Desktop/ALU/db/add_sub_pf8.tdf         ;
+; db/add_sub_ob8.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/User/Desktop/ALU/db/add_sub_ob8.tdf         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/lpm_mult.tdf              ;
+; lpm_add_sub.inc                  ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/lpm_add_sub.inc           ;
+; multcore.inc                     ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/multcore.inc              ;
+; bypassff.inc                     ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/bypassff.inc              ;
+; altshift.inc                     ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/altshift.inc              ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/multcore.tdf              ;
+; csa_add.inc                      ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/csa_add.inc               ;
+; mpar_add.inc                     ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/mpar_add.inc              ;
+; muleabz.inc                      ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/muleabz.inc               ;
+; mul_lfrg.inc                     ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/mul_lfrg.inc              ;
+; mul_boothc.inc                   ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/mul_boothc.inc            ;
+; alt_ded_mult.inc                 ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/alt_ded_mult.inc          ;
+; alt_ded_mult_y.inc               ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/alt_ded_mult_y.inc        ;
+; dffpipe.inc                      ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/dffpipe.inc               ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/mpar_add.tdf              ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/lpm_add_sub.tdf           ;
+; addcore.inc                      ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/addcore.inc               ;
+; look_add.inc                     ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/look_add.inc              ;
+; alt_stratix_add_sub.inc          ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/alt_stratix_add_sub.inc   ;
+; alt_mercury_add_sub.inc          ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/alt_mercury_add_sub.inc   ;
+; addcore.tdf                      ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/addcore.tdf               ;
+; a_csnbuffer.inc                  ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/a_csnbuffer.inc           ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/a_csnbuffer.tdf           ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/altshift.tdf              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
+
+
++----------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary  ;
++-----------------------------------+----------+
+; Resource                          ; Usage    ;
++-----------------------------------+----------+
+; Total logic elements              ; 135      ;
+; Total combinational functions     ; 131      ;
+;     -- Total 4-input functions    ; 56       ;
+;     -- Total 3-input functions    ; 14       ;
+;     -- Total 2-input functions    ; 51       ;
+;     -- Total 1-input functions    ; 4        ;
+;     -- Total 0-input functions    ; 6        ;
+; Combinational cells for routing   ; 0        ;
+; Total registers                   ; 15       ;
+; Total logic cells in carry chains ; 35       ;
+; I/O pins                          ; 23       ;
+; Maximum fan-out node              ; ydata[0] ;
+; Maximum fan-out                   ; 22       ;
+; Total fan-out                     ; 434      ;
+; Average fan-out                   ; 2.75     ;
++-----------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                    ;
++------------------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                     ; Logic Cells ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name                                                                                                                         ;
++------------------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; |ALU                                           ; 135 (88)    ; 15           ; 0           ; 0            ; 0       ; 0         ; 0         ; 23   ; 0            ; 120 (73)     ; 4 (4)             ; 11 (11)          ; 35 (10)         ; |ALU                                                                                                                                        ;
+;    |lpm_divide:div_rtl_0|                      ; 19 (0)      ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 9 (0)           ; |ALU|lpm_divide:div_rtl_0                                                                                                                   ;
+;       |lpm_divide_imf:auto_generated|          ; 19 (0)      ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 9 (0)           ; |ALU|lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated                                                                                     ;
+;          |sign_div_unsign_ihg:divider|         ; 19 (0)      ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 9 (0)           ; |ALU|lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider                                                         ;
+;             |alt_u_div_bmd:divider|            ; 19 (9)      ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 19 (9)       ; 0 (0)             ; 0 (0)            ; 9 (0)           ; |ALU|lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider                                   ;
+;                |add_sub_of8:add_sub_2|         ; 4 (4)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 4 (4)           ; |ALU|lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2             ;
+;                |add_sub_pf8:add_sub_3|         ; 6 (6)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; |ALU|lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3             ;
+;    |lpm_mult:mult_rtl_1|                       ; 28 (0)      ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 0 (0)            ; 16 (0)          ; |ALU|lpm_mult:mult_rtl_1                                                                                                                    ;
+;       |multcore:mult_core|                     ; 28 (12)     ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 28 (12)      ; 0 (0)             ; 0 (0)            ; 16 (0)          ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core                                                                                                 ;
+;          |mpar_add:padder|                     ; 16 (0)      ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 16 (0)          ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder                                                                                 ;
+;             |lpm_add_sub:adder[0]|             ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 5 (0)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                            ;
+;                |addcore:adder|                 ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 5 (0)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder                                              ;
+;                   |a_csnbuffer:result_node|    ; 5 (5)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node                      ;
+;             |lpm_add_sub:adder[1]|             ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 5 (0)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                            ;
+;                |addcore:adder|                 ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 5 (0)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder                                              ;
+;                   |a_csnbuffer:result_node|    ; 5 (5)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node                      ;
+;             |mpar_add:sub_par_add|             ; 6 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 6 (0)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                            ;
+;                |lpm_add_sub:adder[0]|          ; 6 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 6 (0)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                                       ;
+;                   |addcore:adder|              ; 6 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 6 (0)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder                         ;
+;                      |a_csnbuffer:result_node| ; 6 (6)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; |ALU|lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node ;
++------------------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 15    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; Yes        ; |ALU|res[0]                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |ALU|res[5]                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; numbits        ; 3     ; Integer                                    ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:div_rtl_0 ;
++------------------------+----------------+-----------------------------+
+; Parameter Name         ; Value          ; Type                        ;
++------------------------+----------------+-----------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                     ;
+; LPM_WIDTHD             ; 4              ; Untyped                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                     ;
+; CBXI_PARAMETER         ; lpm_divide_imf ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE              ;
++------------------------+----------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:mult_rtl_1            ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4        ; Untyped             ;
+; LPM_WIDTHB                                     ; 4        ; Untyped             ;
+; LPM_WIDTHP                                     ; 8        ; Untyped             ;
+; LPM_WIDTHR                                     ; 8        ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped             ;
+; DEVICE_FAMILY                                  ; Stratix  ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance              ;
++---------------------------------------+---------------------+
+; Name                                  ; Value               ;
++---------------------------------------+---------------------+
+; Number of entity instances            ; 1                   ;
+; Entity Instance                       ; lpm_mult:mult_rtl_1 ;
+;     -- LPM_WIDTHA                     ; 4                   ;
+;     -- LPM_WIDTHB                     ; 4                   ;
+;     -- LPM_WIDTHP                     ; 8                   ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED            ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                  ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                  ;
+;     -- USE_EAB                        ; OFF                 ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                  ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                  ;
++---------------------------------------+---------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/Documents and Settings/User/Desktop/ALU/laba633.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Tue Apr 16 15:42:01 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off laba633 -c laba633
+Warning: (10273) Verilog HDL warning at Alu.v(91): extended using "x" or "z"
+Warning: (10273) Verilog HDL warning at Alu.v(234): extended using "x" or "z"
+Info: Found 1 design units, including 1 entities, in source file Alu.v
+    Info: Found entity 1: ALU
+Info: Elaborating entity "ALU" for the top level hierarchy
+Info: (10035) Verilog HDL or VHDL information at Alu.v(32): object "summa" declared but not used
+Warning: (10271) Verilog HDL Case Statement warning at Alu.v(152): size of case item expression (32) exceeds the size of the case expression (3)
+Warning: Verilog HDL assignment warning at Alu.v(155): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(157): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(159): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(160): truncated value with size 32 to match size of target (1)
+Warning: (10271) Verilog HDL Case Statement warning at Alu.v(163): size of case item expression (32) exceeds the size of the case expression (3)
+Warning: Verilog HDL assignment warning at Alu.v(51): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(166): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(168): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(170): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(171): truncated value with size 32 to match size of target (1)
+Warning: (10271) Verilog HDL Case Statement warning at Alu.v(174): size of case item expression (32) exceeds the size of the case expression (3)
+Warning: Verilog HDL assignment warning at Alu.v(177): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(179): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(181): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(182): truncated value with size 32 to match size of target (1)
+Warning: (10271) Verilog HDL Case Statement warning at Alu.v(185): size of case item expression (32) exceeds the size of the case expression (3)
+Warning: Verilog HDL assignment warning at Alu.v(188): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(190): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(192): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(194): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(196): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(197): truncated value with size 32 to match size of target (1)
+Warning: (10271) Verilog HDL Case Statement warning at Alu.v(200): size of case item expression (32) exceeds the size of the case expression (3)
+Warning: Verilog HDL assignment warning at Alu.v(202): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(91): truncated value with size 32 to match size of target (8)
+Warning: Verilog HDL assignment warning at Alu.v(204): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(206): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(208): truncated value with size 32 to match size of target (1)
+Warning: (10271) Verilog HDL Case Statement warning at Alu.v(211): size of case item expression (32) exceeds the size of the case expression (3)
+Warning: Verilog HDL assignment warning at Alu.v(113): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(214): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(215): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(216): truncated value with size 32 to match size of target (1)
+Warning: (10271) Verilog HDL Case Statement warning at Alu.v(219): size of case item expression (32) exceeds the size of the case expression (3)
+Warning: Verilog HDL assignment warning at Alu.v(128): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(222): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(223): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(224): truncated value with size 32 to match size of target (1)
+Warning: (10271) Verilog HDL Case Statement warning at Alu.v(227): size of case item expression (32) exceeds the size of the case expression (3)
+Warning: Verilog HDL assignment warning at Alu.v(144): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(230): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(231): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(232): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at Alu.v(234): truncated value with size 32 to match size of target (8)
+Warning: Reduced register "Divide.Divide[7]" with stuck data_in port to stuck value GND
+Warning: Reduced register "Divide.Divide[6]" with stuck data_in port to stuck value GND
+Warning: Reduced register "Divide.Divide[5]" with stuck data_in port to stuck value GND
+Warning: Reduced register "Divide.Divide[4]" with stuck data_in port to stuck value GND
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus50/libraries/megafunctions/lpm_divide.tdf
+    Info: Found entity 1: lpm_divide
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_imf.tdf
+    Info: Found entity 1: lpm_divide_imf
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ihg.tdf
+    Info: Found entity 1: sign_div_unsign_ihg
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_bmd.tdf
+    Info: Found entity 1: alt_u_div_bmd
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_mf8.tdf
+    Info: Found entity 1: add_sub_mf8
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_nf8.tdf
+    Info: Found entity 1: add_sub_nf8
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_of8.tdf
+    Info: Found entity 1: add_sub_of8
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_pf8.tdf
+    Info: Found entity 1: add_sub_pf8
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_ob8.tdf
+    Info: Found entity 1: add_sub_ob8
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus50/libraries/megafunctions/lpm_mult.tdf
+    Info: Found entity 1: lpm_mult
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus50/libraries/megafunctions/multcore.tdf
+    Info: Found entity 1: multcore
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus50/libraries/megafunctions/mpar_add.tdf
+    Info: Found entity 1: mpar_add
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus50/libraries/megafunctions/lpm_add_sub.tdf
+    Info: Found entity 1: lpm_add_sub
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus50/libraries/megafunctions/addcore.tdf
+    Info: Found entity 1: addcore
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus50/libraries/megafunctions/a_csnbuffer.tdf
+    Info: Found entity 1: a_csnbuffer
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus50/libraries/megafunctions/altshift.tdf
+    Info: Found entity 1: altshift
+Info: Implemented 158 device resources after synthesis - the final resource count might be different
+    Info: Implemented 12 input pins
+    Info: Implemented 11 output pins
+    Info: Implemented 135 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Processing ended: Tue Apr 16 15:42:03 2019
+    Info: Elapsed time: 00:00:02
+
+

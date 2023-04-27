@@ -1,0 +1,537 @@
+Timing Analyzer report for laba633
+Tue Apr 16 15:42:10 2019
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clock'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                       ;
++------------------------------+-------+---------------+----------------------------------+------------------+-----------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From             ; To        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------+-----------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 12.572 ns                        ; ydata[1]         ; z         ;            ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.535 ns                         ; res[5]           ; result[5] ; clock      ;          ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.708 ns                        ; ydata[0]         ; o         ;            ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A   ; None          ; 372.58 MHz ( period = 2.684 ns ) ; Divide.Divide[2] ; z         ; clock      ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                  ;           ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------+-----------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP1S10F484C5       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; Off                ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; NONE             ; 0.000 ns      ; 0.000 ns     ; NONE     ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                     ;
++-------+------------------------------------------------+------------------+------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From             ; To               ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+------------------+------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 372.58 MHz ( period = 2.684 ns )               ; Divide.Divide[2] ; z                ; clock      ; clock    ; None                        ; None                      ; 2.518 ns                ;
+; N/A   ; 376.93 MHz ( period = 2.653 ns )               ; Divide.Divide[1] ; res[1]           ; clock      ; clock    ; None                        ; None                      ; 2.487 ns                ;
+; N/A   ; 385.80 MHz ( period = 2.592 ns )               ; Divide.Divide[3] ; res[3]           ; clock      ; clock    ; None                        ; None                      ; 2.426 ns                ;
+; N/A   ; 388.95 MHz ( period = 2.571 ns )               ; Divide.Divide[1] ; z                ; clock      ; clock    ; None                        ; None                      ; 2.405 ns                ;
+; N/A   ; 400.48 MHz ( period = 2.497 ns )               ; Divide.Divide[0] ; z                ; clock      ; clock    ; None                        ; None                      ; 2.331 ns                ;
+; N/A   ; 418.06 MHz ( period = 2.392 ns )               ; Divide.Divide[3] ; z                ; clock      ; clock    ; None                        ; None                      ; 2.226 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; Divide.Divide[0] ; res[0]           ; clock      ; clock    ; None                        ; None                      ; 2.067 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; Divide.Divide[2] ; res[2]           ; clock      ; clock    ; None                        ; None                      ; 1.992 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; Divide.Divide[3] ; Divide.Divide[3] ; clock      ; clock    ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; Divide.Divide[2] ; Divide.Divide[2] ; clock      ; clock    ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; Divide.Divide[1] ; Divide.Divide[1] ; clock      ; clock    ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; Divide.Divide[0] ; Divide.Divide[0] ; clock      ; clock    ; None                        ; None                      ; 0.389 ns                ;
++-------+------------------------------------------------+------------------+------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; tsu                                                                               ;
++-------+--------------+------------+-----------------+------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From            ; To               ; To Clock ;
++-------+--------------+------------+-----------------+------------------+----------+
+; N/A   ; None         ; 12.572 ns  ; ydata[1]        ; z                ; clock    ;
+; N/A   ; None         ; 12.528 ns  ; ydata[0]        ; z                ; clock    ;
+; N/A   ; None         ; 12.328 ns  ; xdata[2]        ; z                ; clock    ;
+; N/A   ; None         ; 12.308 ns  ; ydata[1]        ; res[0]           ; clock    ;
+; N/A   ; None         ; 12.264 ns  ; ydata[0]        ; res[0]           ; clock    ;
+; N/A   ; None         ; 12.064 ns  ; xdata[2]        ; res[0]           ; clock    ;
+; N/A   ; None         ; 11.324 ns  ; ydata[2]        ; z                ; clock    ;
+; N/A   ; None         ; 11.220 ns  ; ydata[3]        ; z                ; clock    ;
+; N/A   ; None         ; 11.172 ns  ; xdata[1]        ; z                ; clock    ;
+; N/A   ; None         ; 11.060 ns  ; ydata[2]        ; res[0]           ; clock    ;
+; N/A   ; None         ; 10.956 ns  ; ydata[3]        ; res[0]           ; clock    ;
+; N/A   ; None         ; 10.875 ns  ; xdata[0]        ; z                ; clock    ;
+; N/A   ; None         ; 10.663 ns  ; xdata[3]        ; z                ; clock    ;
+; N/A   ; None         ; 10.649 ns  ; ydata[1]        ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 10.605 ns  ; ydata[0]        ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 10.405 ns  ; xdata[2]        ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 10.399 ns  ; xdata[3]        ; res[0]           ; clock    ;
+; N/A   ; None         ; 9.907 ns   ; xdata[1]        ; res[0]           ; clock    ;
+; N/A   ; None         ; 9.790 ns   ; ydata[1]        ; res[1]           ; clock    ;
+; N/A   ; None         ; 9.746 ns   ; ydata[0]        ; res[1]           ; clock    ;
+; N/A   ; None         ; 9.546 ns   ; xdata[2]        ; res[1]           ; clock    ;
+; N/A   ; None         ; 9.401 ns   ; ydata[2]        ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 9.297 ns   ; ydata[3]        ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 8.920 ns   ; xdata[0]        ; res[3]           ; clock    ;
+; N/A   ; None         ; 8.887 ns   ; xdata[1]        ; res[3]           ; clock    ;
+; N/A   ; None         ; 8.861 ns   ; ydata[1]        ; res[3]           ; clock    ;
+; N/A   ; None         ; 8.842 ns   ; xdata[1]        ; res[4]           ; clock    ;
+; N/A   ; None         ; 8.740 ns   ; xdata[3]        ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 8.590 ns   ; ydata[1]        ; res[4]           ; clock    ;
+; N/A   ; None         ; 8.545 ns   ; xdata[0]        ; res[4]           ; clock    ;
+; N/A   ; None         ; 8.542 ns   ; ydata[2]        ; res[1]           ; clock    ;
+; N/A   ; None         ; 8.438 ns   ; ydata[3]        ; res[1]           ; clock    ;
+; N/A   ; None         ; 8.427 ns   ; ydata[0]        ; res[3]           ; clock    ;
+; N/A   ; None         ; 8.379 ns   ; xdata[1]        ; res[7]           ; clock    ;
+; N/A   ; None         ; 8.375 ns   ; xdata[1]        ; res[6]           ; clock    ;
+; N/A   ; None         ; 8.362 ns   ; xdata[0]        ; res[2]           ; clock    ;
+; N/A   ; None         ; 8.303 ns   ; ydata[1]        ; res[2]           ; clock    ;
+; N/A   ; None         ; 8.269 ns   ; xdata[1]        ; res[2]           ; clock    ;
+; N/A   ; None         ; 8.248 ns   ; xdata[1]        ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 8.173 ns   ; xdata[1]        ; res[5]           ; clock    ;
+; N/A   ; None         ; 8.127 ns   ; ydata[1]        ; res[7]           ; clock    ;
+; N/A   ; None         ; 8.123 ns   ; ydata[1]        ; res[6]           ; clock    ;
+; N/A   ; None         ; 8.082 ns   ; xdata[0]        ; res[7]           ; clock    ;
+; N/A   ; None         ; 8.078 ns   ; xdata[0]        ; res[6]           ; clock    ;
+; N/A   ; None         ; 8.052 ns   ; ydata[0]        ; res[4]           ; clock    ;
+; N/A   ; None         ; 7.921 ns   ; ydata[1]        ; res[5]           ; clock    ;
+; N/A   ; None         ; 7.881 ns   ; xdata[3]        ; res[1]           ; clock    ;
+; N/A   ; None         ; 7.876 ns   ; xdata[0]        ; res[5]           ; clock    ;
+; N/A   ; None         ; 7.869 ns   ; ydata[0]        ; res[2]           ; clock    ;
+; N/A   ; None         ; 7.853 ns   ; xdata[2]        ; res[3]           ; clock    ;
+; N/A   ; None         ; 7.808 ns   ; xdata[2]        ; res[4]           ; clock    ;
+; N/A   ; None         ; 7.681 ns   ; ydata[1]        ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 7.673 ns   ; xdata[2]        ; res[7]           ; clock    ;
+; N/A   ; None         ; 7.669 ns   ; xdata[2]        ; res[6]           ; clock    ;
+; N/A   ; None         ; 7.637 ns   ; ydata[0]        ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 7.592 ns   ; ydata[0]        ; res[7]           ; clock    ;
+; N/A   ; None         ; 7.588 ns   ; ydata[0]        ; res[6]           ; clock    ;
+; N/A   ; None         ; 7.528 ns   ; ydata[2]        ; res[3]           ; clock    ;
+; N/A   ; None         ; 7.489 ns   ; ydata[2]        ; res[4]           ; clock    ;
+; N/A   ; None         ; 7.465 ns   ; xdata[2]        ; res[5]           ; clock    ;
+; N/A   ; None         ; 7.452 ns   ; ydata[2]        ; res[7]           ; clock    ;
+; N/A   ; None         ; 7.448 ns   ; ydata[2]        ; res[6]           ; clock    ;
+; N/A   ; None         ; 7.437 ns   ; xdata[2]        ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 7.429 ns   ; xdata[0]        ; res[0]           ; clock    ;
+; N/A   ; None         ; 7.415 ns   ; xdata[3]        ; res[7]           ; clock    ;
+; N/A   ; None         ; 7.389 ns   ; xdata[1]        ; res[1]           ; clock    ;
+; N/A   ; None         ; 7.384 ns   ; ydata[0]        ; res[5]           ; clock    ;
+; N/A   ; None         ; 7.339 ns   ; ydata[3]        ; res[7]           ; clock    ;
+; N/A   ; None         ; 7.335 ns   ; ydata[3]        ; res[6]           ; clock    ;
+; N/A   ; None         ; 7.296 ns   ; xdata[0]        ; res[1]           ; clock    ;
+; N/A   ; None         ; 7.259 ns   ; xdata[2]        ; res[2]           ; clock    ;
+; N/A   ; None         ; 7.186 ns   ; ydata[2]        ; res[5]           ; clock    ;
+; N/A   ; None         ; 6.986 ns   ; ydata[3]        ; res[4]           ; clock    ;
+; N/A   ; None         ; 6.889 ns   ; xdata[3]        ; res[6]           ; clock    ;
+; N/A   ; None         ; 6.855 ns   ; xdata[3]        ; res[3]           ; clock    ;
+; N/A   ; None         ; 6.810 ns   ; xdata[3]        ; res[4]           ; clock    ;
+; N/A   ; None         ; 6.725 ns   ; ydata[3]        ; res[5]           ; clock    ;
+; N/A   ; None         ; 6.592 ns   ; ydata[3]        ; res[3]           ; clock    ;
+; N/A   ; None         ; 6.529 ns   ; xdata[3]        ; res[5]           ; clock    ;
+; N/A   ; None         ; 6.433 ns   ; ydata[2]        ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 6.329 ns   ; ydata[3]        ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 6.167 ns   ; ydata[3]        ; res[2]           ; clock    ;
+; N/A   ; None         ; 6.133 ns   ; ydata[2]        ; res[2]           ; clock    ;
+; N/A   ; None         ; 6.123 ns   ; xdata[3]        ; res[2]           ; clock    ;
+; N/A   ; None         ; 5.772 ns   ; xdata[3]        ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 5.422 ns   ; xdata[0]        ; n                ; clock    ;
+; N/A   ; None         ; 5.387 ns   ; ydata[0]        ; n                ; clock    ;
+; N/A   ; None         ; 5.280 ns   ; xdata[1]        ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 5.178 ns   ; xdata[0]        ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 5.081 ns   ; command_code[2] ; z                ; clock    ;
+; N/A   ; None         ; 5.016 ns   ; xdata[1]        ; n                ; clock    ;
+; N/A   ; None         ; 4.996 ns   ; ydata[0]        ; Divide.Divide[2] ; clock    ;
+; N/A   ; None         ; 4.964 ns   ; command_code[2] ; res[3]           ; clock    ;
+; N/A   ; None         ; 4.823 ns   ; xdata[3]        ; n                ; clock    ;
+; N/A   ; None         ; 4.793 ns   ; ydata[1]        ; n                ; clock    ;
+; N/A   ; None         ; 4.743 ns   ; command_code[1] ; z                ; clock    ;
+; N/A   ; None         ; 4.703 ns   ; ydata[1]        ; Divide.Divide[2] ; clock    ;
+; N/A   ; None         ; 4.639 ns   ; ydata[2]        ; n                ; clock    ;
+; N/A   ; None         ; 4.638 ns   ; ydata[2]        ; o                ; clock    ;
+; N/A   ; None         ; 4.632 ns   ; command_code[2] ; res[2]           ; clock    ;
+; N/A   ; None         ; 4.583 ns   ; ydata[3]        ; Divide.Divide[2] ; clock    ;
+; N/A   ; None         ; 4.573 ns   ; xdata[2]        ; n                ; clock    ;
+; N/A   ; None         ; 4.556 ns   ; ydata[3]        ; n                ; clock    ;
+; N/A   ; None         ; 4.539 ns   ; xdata[3]        ; Divide.Divide[2] ; clock    ;
+; N/A   ; None         ; 4.524 ns   ; xdata[2]        ; Divide.Divide[2] ; clock    ;
+; N/A   ; None         ; 4.485 ns   ; ydata[2]        ; Divide.Divide[3] ; clock    ;
+; N/A   ; None         ; 4.482 ns   ; ydata[2]        ; Divide.Divide[2] ; clock    ;
+; N/A   ; None         ; 4.467 ns   ; command_code[1] ; res[3]           ; clock    ;
+; N/A   ; None         ; 4.391 ns   ; ydata[3]        ; o                ; clock    ;
+; N/A   ; None         ; 4.378 ns   ; command_code[2] ; res[0]           ; clock    ;
+; N/A   ; None         ; 4.299 ns   ; command_code[2] ; res[1]           ; clock    ;
+; N/A   ; None         ; 4.290 ns   ; command_code[1] ; res[2]           ; clock    ;
+; N/A   ; None         ; 4.280 ns   ; ydata[1]        ; o                ; clock    ;
+; N/A   ; None         ; 4.260 ns   ; command_code[0] ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 4.260 ns   ; command_code[0] ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 4.260 ns   ; command_code[0] ; Divide.Divide[2] ; clock    ;
+; N/A   ; None         ; 4.260 ns   ; command_code[0] ; Divide.Divide[3] ; clock    ;
+; N/A   ; None         ; 4.238 ns   ; ydata[3]        ; Divide.Divide[3] ; clock    ;
+; N/A   ; None         ; 4.220 ns   ; command_code[0] ; o                ; clock    ;
+; N/A   ; None         ; 4.169 ns   ; command_code[2] ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 4.169 ns   ; command_code[2] ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 4.169 ns   ; command_code[2] ; Divide.Divide[2] ; clock    ;
+; N/A   ; None         ; 4.169 ns   ; command_code[2] ; Divide.Divide[3] ; clock    ;
+; N/A   ; None         ; 4.129 ns   ; command_code[2] ; o                ; clock    ;
+; N/A   ; None         ; 4.127 ns   ; ydata[1]        ; Divide.Divide[3] ; clock    ;
+; N/A   ; None         ; 4.112 ns   ; command_code[1] ; res[0]           ; clock    ;
+; N/A   ; None         ; 4.048 ns   ; command_code[2] ; n                ; clock    ;
+; N/A   ; None         ; 3.821 ns   ; command_code[2] ; res[7]           ; clock    ;
+; N/A   ; None         ; 3.819 ns   ; command_code[2] ; res[5]           ; clock    ;
+; N/A   ; None         ; 3.819 ns   ; command_code[2] ; res[6]           ; clock    ;
+; N/A   ; None         ; 3.654 ns   ; command_code[1] ; n                ; clock    ;
+; N/A   ; None         ; 3.631 ns   ; command_code[1] ; res[1]           ; clock    ;
+; N/A   ; None         ; 3.618 ns   ; command_code[0] ; res[4]           ; clock    ;
+; N/A   ; None         ; 3.599 ns   ; command_code[1] ; Divide.Divide[0] ; clock    ;
+; N/A   ; None         ; 3.599 ns   ; command_code[1] ; Divide.Divide[1] ; clock    ;
+; N/A   ; None         ; 3.599 ns   ; command_code[1] ; Divide.Divide[2] ; clock    ;
+; N/A   ; None         ; 3.599 ns   ; command_code[1] ; Divide.Divide[3] ; clock    ;
+; N/A   ; None         ; 3.559 ns   ; command_code[1] ; o                ; clock    ;
+; N/A   ; None         ; 3.427 ns   ; command_code[1] ; res[7]           ; clock    ;
+; N/A   ; None         ; 3.425 ns   ; command_code[1] ; res[5]           ; clock    ;
+; N/A   ; None         ; 3.425 ns   ; command_code[1] ; res[6]           ; clock    ;
+; N/A   ; None         ; 3.369 ns   ; ydata[0]        ; Divide.Divide[3] ; clock    ;
+; N/A   ; None         ; 3.320 ns   ; command_code[0] ; res[7]           ; clock    ;
+; N/A   ; None         ; 3.316 ns   ; command_code[0] ; res[5]           ; clock    ;
+; N/A   ; None         ; 3.316 ns   ; command_code[0] ; res[6]           ; clock    ;
+; N/A   ; None         ; 3.313 ns   ; command_code[0] ; res[3]           ; clock    ;
+; N/A   ; None         ; 3.312 ns   ; command_code[0] ; res[2]           ; clock    ;
+; N/A   ; None         ; 3.247 ns   ; xdata[3]        ; Divide.Divide[3] ; clock    ;
+; N/A   ; None         ; 3.219 ns   ; command_code[2] ; res[4]           ; clock    ;
+; N/A   ; None         ; 3.192 ns   ; command_code[0] ; z                ; clock    ;
+; N/A   ; None         ; 3.170 ns   ; command_code[0] ; n                ; clock    ;
+; N/A   ; None         ; 3.151 ns   ; command_code[0] ; res[0]           ; clock    ;
+; N/A   ; None         ; 3.130 ns   ; command_code[1] ; res[4]           ; clock    ;
+; N/A   ; None         ; 2.916 ns   ; command_code[0] ; res[1]           ; clock    ;
+; N/A   ; None         ; 2.818 ns   ; ydata[0]        ; o                ; clock    ;
++-------+--------------+------------+-----------------+------------------+----------+
+
+
++---------------------------------------------------------------------+
+; tco                                                                 ;
++-------+--------------+------------+--------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From   ; To        ; From Clock ;
++-------+--------------+------------+--------+-----------+------------+
+; N/A   ; None         ; 7.535 ns   ; res[5] ; result[5] ; clock      ;
+; N/A   ; None         ; 7.471 ns   ; res[7] ; result[7] ; clock      ;
+; N/A   ; None         ; 7.282 ns   ; n      ; flagN     ; clock      ;
+; N/A   ; None         ; 7.256 ns   ; o      ; flagO     ; clock      ;
+; N/A   ; None         ; 7.236 ns   ; z      ; flagZ     ; clock      ;
+; N/A   ; None         ; 7.220 ns   ; res[0] ; result[0] ; clock      ;
+; N/A   ; None         ; 7.200 ns   ; res[2] ; result[2] ; clock      ;
+; N/A   ; None         ; 7.189 ns   ; res[3] ; result[3] ; clock      ;
+; N/A   ; None         ; 7.179 ns   ; res[4] ; result[4] ; clock      ;
+; N/A   ; None         ; 7.179 ns   ; res[1] ; result[1] ; clock      ;
+; N/A   ; None         ; 7.096 ns   ; res[6] ; result[6] ; clock      ;
++-------+--------------+------------+--------+-----------+------------+
+
+
++-----------------------------------------------------------------------------------------+
+; th                                                                                      ;
++---------------+-------------+-----------+-----------------+------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From            ; To               ; To Clock ;
++---------------+-------------+-----------+-----------------+------------------+----------+
+; N/A           ; None        ; -2.708 ns ; ydata[0]        ; o                ; clock    ;
+; N/A           ; None        ; -2.805 ns ; command_code[0] ; res[4]           ; clock    ;
+; N/A           ; None        ; -2.806 ns ; command_code[0] ; res[1]           ; clock    ;
+; N/A           ; None        ; -2.807 ns ; command_code[1] ; res[1]           ; clock    ;
+; N/A           ; None        ; -2.949 ns ; ydata[3]        ; res[3]           ; clock    ;
+; N/A           ; None        ; -3.020 ns ; command_code[1] ; res[4]           ; clock    ;
+; N/A           ; None        ; -3.041 ns ; command_code[0] ; res[0]           ; clock    ;
+; N/A           ; None        ; -3.060 ns ; command_code[0] ; n                ; clock    ;
+; N/A           ; None        ; -3.082 ns ; command_code[0] ; z                ; clock    ;
+; N/A           ; None        ; -3.086 ns ; command_code[1] ; res[0]           ; clock    ;
+; N/A           ; None        ; -3.109 ns ; command_code[2] ; res[4]           ; clock    ;
+; N/A           ; None        ; -3.133 ns ; xdata[3]        ; res[3]           ; clock    ;
+; N/A           ; None        ; -3.137 ns ; xdata[3]        ; Divide.Divide[3] ; clock    ;
+; N/A           ; None        ; -3.202 ns ; command_code[0] ; res[2]           ; clock    ;
+; N/A           ; None        ; -3.203 ns ; ydata[1]        ; res[1]           ; clock    ;
+; N/A           ; None        ; -3.203 ns ; command_code[0] ; res[3]           ; clock    ;
+; N/A           ; None        ; -3.206 ns ; command_code[0] ; res[5]           ; clock    ;
+; N/A           ; None        ; -3.206 ns ; command_code[0] ; res[6]           ; clock    ;
+; N/A           ; None        ; -3.210 ns ; command_code[0] ; res[7]           ; clock    ;
+; N/A           ; None        ; -3.232 ns ; xdata[1]        ; res[1]           ; clock    ;
+; N/A           ; None        ; -3.241 ns ; command_code[1] ; z                ; clock    ;
+; N/A           ; None        ; -3.252 ns ; ydata[0]        ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -3.253 ns ; ydata[0]        ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -3.254 ns ; ydata[0]        ; Divide.Divide[2] ; clock    ;
+; N/A           ; None        ; -3.259 ns ; ydata[0]        ; Divide.Divide[3] ; clock    ;
+; N/A           ; None        ; -3.315 ns ; command_code[1] ; res[5]           ; clock    ;
+; N/A           ; None        ; -3.315 ns ; command_code[1] ; res[6]           ; clock    ;
+; N/A           ; None        ; -3.317 ns ; command_code[1] ; res[7]           ; clock    ;
+; N/A           ; None        ; -3.375 ns ; ydata[0]        ; res[0]           ; clock    ;
+; N/A           ; None        ; -3.384 ns ; command_code[2] ; res[0]           ; clock    ;
+; N/A           ; None        ; -3.449 ns ; command_code[1] ; o                ; clock    ;
+; N/A           ; None        ; -3.489 ns ; command_code[1] ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -3.489 ns ; command_code[1] ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -3.489 ns ; command_code[1] ; Divide.Divide[2] ; clock    ;
+; N/A           ; None        ; -3.489 ns ; command_code[1] ; Divide.Divide[3] ; clock    ;
+; N/A           ; None        ; -3.516 ns ; command_code[2] ; res[3]           ; clock    ;
+; N/A           ; None        ; -3.544 ns ; command_code[1] ; n                ; clock    ;
+; N/A           ; None        ; -3.568 ns ; command_code[1] ; res[3]           ; clock    ;
+; N/A           ; None        ; -3.571 ns ; command_code[1] ; res[2]           ; clock    ;
+; N/A           ; None        ; -3.597 ns ; xdata[0]        ; res[0]           ; clock    ;
+; N/A           ; None        ; -3.709 ns ; command_code[2] ; res[5]           ; clock    ;
+; N/A           ; None        ; -3.709 ns ; command_code[2] ; res[6]           ; clock    ;
+; N/A           ; None        ; -3.711 ns ; command_code[2] ; res[7]           ; clock    ;
+; N/A           ; None        ; -3.793 ns ; command_code[2] ; res[1]           ; clock    ;
+; N/A           ; None        ; -3.818 ns ; ydata[3]        ; n                ; clock    ;
+; N/A           ; None        ; -3.826 ns ; ydata[3]        ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -3.938 ns ; command_code[2] ; n                ; clock    ;
+; N/A           ; None        ; -4.014 ns ; ydata[1]        ; Divide.Divide[2] ; clock    ;
+; N/A           ; None        ; -4.015 ns ; ydata[1]        ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -4.017 ns ; ydata[1]        ; Divide.Divide[3] ; clock    ;
+; N/A           ; None        ; -4.019 ns ; command_code[2] ; o                ; clock    ;
+; N/A           ; None        ; -4.059 ns ; command_code[2] ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -4.059 ns ; command_code[2] ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -4.059 ns ; command_code[2] ; Divide.Divide[2] ; clock    ;
+; N/A           ; None        ; -4.059 ns ; command_code[2] ; Divide.Divide[3] ; clock    ;
+; N/A           ; None        ; -4.068 ns ; xdata[3]        ; n                ; clock    ;
+; N/A           ; None        ; -4.110 ns ; command_code[0] ; o                ; clock    ;
+; N/A           ; None        ; -4.125 ns ; ydata[3]        ; Divide.Divide[2] ; clock    ;
+; N/A           ; None        ; -4.126 ns ; ydata[3]        ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -4.128 ns ; ydata[3]        ; Divide.Divide[3] ; clock    ;
+; N/A           ; None        ; -4.133 ns ; command_code[2] ; z                ; clock    ;
+; N/A           ; None        ; -4.148 ns ; ydata[2]        ; res[2]           ; clock    ;
+; N/A           ; None        ; -4.150 ns ; command_code[0] ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -4.150 ns ; command_code[0] ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -4.150 ns ; command_code[0] ; Divide.Divide[2] ; clock    ;
+; N/A           ; None        ; -4.150 ns ; command_code[0] ; Divide.Divide[3] ; clock    ;
+; N/A           ; None        ; -4.170 ns ; ydata[1]        ; o                ; clock    ;
+; N/A           ; None        ; -4.223 ns ; xdata[2]        ; n                ; clock    ;
+; N/A           ; None        ; -4.233 ns ; command_code[2] ; res[2]           ; clock    ;
+; N/A           ; None        ; -4.240 ns ; ydata[1]        ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -4.268 ns ; ydata[2]        ; n                ; clock    ;
+; N/A           ; None        ; -4.281 ns ; ydata[3]        ; o                ; clock    ;
+; N/A           ; None        ; -4.327 ns ; ydata[2]        ; Divide.Divide[2] ; clock    ;
+; N/A           ; None        ; -4.328 ns ; xdata[2]        ; res[2]           ; clock    ;
+; N/A           ; None        ; -4.373 ns ; ydata[2]        ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -4.375 ns ; ydata[2]        ; Divide.Divide[3] ; clock    ;
+; N/A           ; None        ; -4.414 ns ; xdata[2]        ; Divide.Divide[2] ; clock    ;
+; N/A           ; None        ; -4.429 ns ; xdata[3]        ; Divide.Divide[2] ; clock    ;
+; N/A           ; None        ; -4.488 ns ; xdata[3]        ; z                ; clock    ;
+; N/A           ; None        ; -4.524 ns ; ydata[3]        ; res[5]           ; clock    ;
+; N/A           ; None        ; -4.525 ns ; ydata[3]        ; res[6]           ; clock    ;
+; N/A           ; None        ; -4.526 ns ; ydata[3]        ; res[7]           ; clock    ;
+; N/A           ; None        ; -4.528 ns ; ydata[2]        ; o                ; clock    ;
+; N/A           ; None        ; -4.583 ns ; xdata[0]        ; z                ; clock    ;
+; N/A           ; None        ; -4.589 ns ; xdata[1]        ; z                ; clock    ;
+; N/A           ; None        ; -4.590 ns ; ydata[0]        ; res[1]           ; clock    ;
+; N/A           ; None        ; -4.598 ns ; ydata[2]        ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -4.603 ns ; xdata[2]        ; z                ; clock    ;
+; N/A           ; None        ; -4.626 ns ; xdata[0]        ; res[1]           ; clock    ;
+; N/A           ; None        ; -4.628 ns ; ydata[3]        ; res[2]           ; clock    ;
+; N/A           ; None        ; -4.683 ns ; ydata[1]        ; n                ; clock    ;
+; N/A           ; None        ; -4.774 ns ; xdata[3]        ; res[5]           ; clock    ;
+; N/A           ; None        ; -4.775 ns ; xdata[3]        ; res[6]           ; clock    ;
+; N/A           ; None        ; -4.776 ns ; xdata[3]        ; res[7]           ; clock    ;
+; N/A           ; None        ; -4.843 ns ; ydata[0]        ; res[2]           ; clock    ;
+; N/A           ; None        ; -4.878 ns ; xdata[3]        ; res[2]           ; clock    ;
+; N/A           ; None        ; -4.906 ns ; xdata[1]        ; n                ; clock    ;
+; N/A           ; None        ; -4.966 ns ; xdata[2]        ; res[5]           ; clock    ;
+; N/A           ; None        ; -4.967 ns ; xdata[2]        ; res[6]           ; clock    ;
+; N/A           ; None        ; -4.968 ns ; xdata[2]        ; res[7]           ; clock    ;
+; N/A           ; None        ; -4.973 ns ; ydata[0]        ; z                ; clock    ;
+; N/A           ; None        ; -5.011 ns ; ydata[2]        ; res[5]           ; clock    ;
+; N/A           ; None        ; -5.012 ns ; ydata[2]        ; res[6]           ; clock    ;
+; N/A           ; None        ; -5.013 ns ; ydata[2]        ; res[7]           ; clock    ;
+; N/A           ; None        ; -5.037 ns ; ydata[1]        ; z                ; clock    ;
+; N/A           ; None        ; -5.056 ns ; ydata[0]        ; res[5]           ; clock    ;
+; N/A           ; None        ; -5.057 ns ; ydata[0]        ; res[6]           ; clock    ;
+; N/A           ; None        ; -5.058 ns ; xdata[0]        ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -5.058 ns ; ydata[0]        ; res[7]           ; clock    ;
+; N/A           ; None        ; -5.068 ns ; xdata[0]        ; res[5]           ; clock    ;
+; N/A           ; None        ; -5.072 ns ; xdata[1]        ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -5.081 ns ; ydata[3]        ; res[4]           ; clock    ;
+; N/A           ; None        ; -5.099 ns ; xdata[1]        ; res[5]           ; clock    ;
+; N/A           ; None        ; -5.100 ns ; xdata[1]        ; res[6]           ; clock    ;
+; N/A           ; None        ; -5.101 ns ; xdata[1]        ; res[7]           ; clock    ;
+; N/A           ; None        ; -5.161 ns ; xdata[1]        ; res[2]           ; clock    ;
+; N/A           ; None        ; -5.161 ns ; xdata[2]        ; res[3]           ; clock    ;
+; N/A           ; None        ; -5.162 ns ; xdata[1]        ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -5.181 ns ; ydata[0]        ; res[3]           ; clock    ;
+; N/A           ; None        ; -5.206 ns ; xdata[3]        ; Divide.Divide[0] ; clock    ;
+; N/A           ; None        ; -5.209 ns ; ydata[2]        ; res[3]           ; clock    ;
+; N/A           ; None        ; -5.219 ns ; ydata[3]        ; z                ; clock    ;
+; N/A           ; None        ; -5.224 ns ; xdata[1]        ; res[3]           ; clock    ;
+; N/A           ; None        ; -5.253 ns ; xdata[3]        ; res[4]           ; clock    ;
+; N/A           ; None        ; -5.264 ns ; ydata[1]        ; res[2]           ; clock    ;
+; N/A           ; None        ; -5.276 ns ; xdata[0]        ; res[6]           ; clock    ;
+; N/A           ; None        ; -5.277 ns ; ydata[0]        ; n                ; clock    ;
+; N/A           ; None        ; -5.280 ns ; xdata[0]        ; res[7]           ; clock    ;
+; N/A           ; None        ; -5.288 ns ; ydata[3]        ; res[0]           ; clock    ;
+; N/A           ; None        ; -5.312 ns ; xdata[0]        ; n                ; clock    ;
+; N/A           ; None        ; -5.426 ns ; ydata[1]        ; res[5]           ; clock    ;
+; N/A           ; None        ; -5.427 ns ; ydata[1]        ; res[6]           ; clock    ;
+; N/A           ; None        ; -5.428 ns ; ydata[1]        ; res[7]           ; clock    ;
+; N/A           ; None        ; -5.523 ns ; xdata[2]        ; res[4]           ; clock    ;
+; N/A           ; None        ; -5.538 ns ; xdata[3]        ; res[0]           ; clock    ;
+; N/A           ; None        ; -5.553 ns ; xdata[2]        ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -5.568 ns ; ydata[2]        ; res[4]           ; clock    ;
+; N/A           ; None        ; -5.569 ns ; xdata[3]        ; Divide.Divide[1] ; clock    ;
+; N/A           ; None        ; -5.613 ns ; ydata[0]        ; res[4]           ; clock    ;
+; N/A           ; None        ; -5.646 ns ; xdata[0]        ; res[2]           ; clock    ;
+; N/A           ; None        ; -5.649 ns ; ydata[3]        ; res[1]           ; clock    ;
+; N/A           ; None        ; -5.656 ns ; xdata[1]        ; res[4]           ; clock    ;
+; N/A           ; None        ; -5.680 ns ; ydata[1]        ; res[3]           ; clock    ;
+; N/A           ; None        ; -5.704 ns ; ydata[1]        ; res[0]           ; clock    ;
+; N/A           ; None        ; -5.711 ns ; ydata[2]        ; z                ; clock    ;
+; N/A           ; None        ; -5.739 ns ; xdata[0]        ; res[4]           ; clock    ;
+; N/A           ; None        ; -5.882 ns ; xdata[0]        ; res[3]           ; clock    ;
+; N/A           ; None        ; -5.899 ns ; xdata[3]        ; res[1]           ; clock    ;
+; N/A           ; None        ; -5.933 ns ; xdata[2]        ; res[0]           ; clock    ;
+; N/A           ; None        ; -5.983 ns ; ydata[1]        ; res[4]           ; clock    ;
+; N/A           ; None        ; -5.999 ns ; ydata[2]        ; res[0]           ; clock    ;
+; N/A           ; None        ; -6.097 ns ; xdata[2]        ; res[1]           ; clock    ;
+; N/A           ; None        ; -6.142 ns ; ydata[2]        ; res[1]           ; clock    ;
+; N/A           ; None        ; -6.731 ns ; xdata[1]        ; res[0]           ; clock    ;
+; N/A           ; None        ; -6.871 ns ; xdata[2]        ; Divide.Divide[0] ; clock    ;
++---------------+-------------+-----------+-----------------+------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Tue Apr 16 15:42:09 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off laba633 -c laba633 --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Info: Clock "clock" has Internal fmax of 372.58 MHz between source register "Divide.Divide[2]" and destination register "z" (period= 2.684 ns)
+    Info: + Longest register to register delay is 2.518 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X35_Y16_N8; Fanout = 2; REG Node = 'Divide.Divide[2]'
+        Info: 2: + IC(0.000 ns) + CELL(0.230 ns) = 0.230 ns; Loc. = LC_X35_Y16_N8; Fanout = 2; COMB Node = 'Divide~198'
+        Info: 3: + IC(0.335 ns) + CELL(0.366 ns) = 0.931 ns; Loc. = LC_X35_Y16_N5; Fanout = 1; COMB Node = 'reduce_nor~341'
+        Info: 4: + IC(0.331 ns) + CELL(0.183 ns) = 1.445 ns; Loc. = LC_X35_Y16_N2; Fanout = 1; COMB Node = 'Select~843'
+        Info: 5: + IC(0.134 ns) + CELL(0.075 ns) = 1.654 ns; Loc. = LC_X35_Y16_N3; Fanout = 1; COMB Node = 'Select~844'
+        Info: 6: + IC(0.325 ns) + CELL(0.539 ns) = 2.518 ns; Loc. = LC_X35_Y16_N4; Fanout = 1; REG Node = 'z'
+        Info: Total cell delay = 1.393 ns ( 55.32 % )
+        Info: Total interconnect delay = 1.125 ns ( 44.68 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clock" to destination register is 2.892 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 15; CLK Node = 'clock'
+            Info: 2: + IC(1.625 ns) + CELL(0.542 ns) = 2.892 ns; Loc. = LC_X35_Y16_N4; Fanout = 1; REG Node = 'z'
+            Info: Total cell delay = 1.267 ns ( 43.81 % )
+            Info: Total interconnect delay = 1.625 ns ( 56.19 % )
+        Info: - Longest clock path from clock "clock" to source register is 2.892 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 15; CLK Node = 'clock'
+            Info: 2: + IC(1.625 ns) + CELL(0.542 ns) = 2.892 ns; Loc. = LC_X35_Y16_N8; Fanout = 2; REG Node = 'Divide.Divide[2]'
+            Info: Total cell delay = 1.267 ns ( 43.81 % )
+            Info: Total interconnect delay = 1.625 ns ( 56.19 % )
+    Info: + Micro clock to output delay of source is 0.156 ns
+    Info: + Micro setup delay of destination is 0.010 ns
+Info: tsu for register "z" (data pin = "ydata[1]", clock pin = "clock") is 12.572 ns
+    Info: + Longest pin to register delay is 15.454 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.087 ns) = 1.087 ns; Loc. = PIN_P9; Fanout = 23; PIN Node = 'ydata[1]'
+        Info: 2: + IC(4.514 ns) + CELL(0.366 ns) = 5.967 ns; Loc. = LC_X35_Y15_N2; Fanout = 1; COMB Node = 'lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|StageOut[5]~403'
+        Info: 3: + IC(1.095 ns) + CELL(0.075 ns) = 7.137 ns; Loc. = LC_X35_Y13_N4; Fanout = 4; COMB Node = 'lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|StageOut[5]~404'
+        Info: 4: + IC(1.085 ns) + CELL(0.341 ns) = 8.563 ns; Loc. = LC_X35_Y12_N3; Fanout = 1; COMB Node = 'lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2|add_sub_cella[0]~51COUT1_66'
+        Info: 5: + IC(0.000 ns) + CELL(0.365 ns) = 8.928 ns; Loc. = LC_X35_Y12_N4; Fanout = 4; COMB Node = 'lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2|add_sub_cella[0]~44'
+        Info: 6: + IC(1.194 ns) + CELL(0.366 ns) = 10.488 ns; Loc. = LC_X35_Y13_N2; Fanout = 2; COMB Node = 'lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|StageOut[9]~408'
+        Info: 7: + IC(0.813 ns) + CELL(0.341 ns) = 11.642 ns; Loc. = LC_X35_Y13_N7; Fanout = 1; COMB Node = 'lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~139COUT1_154'
+        Info: 8: + IC(0.000 ns) + CELL(0.060 ns) = 11.702 ns; Loc. = LC_X35_Y13_N8; Fanout = 1; COMB Node = 'lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~134COUT1_155'
+        Info: 9: + IC(0.000 ns) + CELL(0.365 ns) = 12.067 ns; Loc. = LC_X35_Y13_N9; Fanout = 2; COMB Node = 'lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~126'
+        Info: 10: + IC(1.006 ns) + CELL(0.280 ns) = 13.353 ns; Loc. = LC_X35_Y16_N7; Fanout = 2; COMB Node = 'lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~131'
+        Info: 11: + IC(0.331 ns) + CELL(0.183 ns) = 13.867 ns; Loc. = LC_X35_Y16_N5; Fanout = 1; COMB Node = 'reduce_nor~341'
+        Info: 12: + IC(0.331 ns) + CELL(0.183 ns) = 14.381 ns; Loc. = LC_X35_Y16_N2; Fanout = 1; COMB Node = 'Select~843'
+        Info: 13: + IC(0.134 ns) + CELL(0.075 ns) = 14.590 ns; Loc. = LC_X35_Y16_N3; Fanout = 1; COMB Node = 'Select~844'
+        Info: 14: + IC(0.325 ns) + CELL(0.539 ns) = 15.454 ns; Loc. = LC_X35_Y16_N4; Fanout = 1; REG Node = 'z'
+        Info: Total cell delay = 4.626 ns ( 29.93 % )
+        Info: Total interconnect delay = 10.828 ns ( 70.07 % )
+    Info: + Micro setup delay of destination is 0.010 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 2.892 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 15; CLK Node = 'clock'
+        Info: 2: + IC(1.625 ns) + CELL(0.542 ns) = 2.892 ns; Loc. = LC_X35_Y16_N4; Fanout = 1; REG Node = 'z'
+        Info: Total cell delay = 1.267 ns ( 43.81 % )
+        Info: Total interconnect delay = 1.625 ns ( 56.19 % )
+Info: tco from clock "clock" to destination pin "result[5]" through register "res[5]" is 7.535 ns
+    Info: + Longest clock path from clock "clock" to source register is 2.881 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 15; CLK Node = 'clock'
+        Info: 2: + IC(1.614 ns) + CELL(0.542 ns) = 2.881 ns; Loc. = LC_X36_Y14_N5; Fanout = 1; REG Node = 'res[5]'
+        Info: Total cell delay = 1.267 ns ( 43.98 % )
+        Info: Total interconnect delay = 1.614 ns ( 56.02 % )
+    Info: + Micro clock to output delay of source is 0.156 ns
+    Info: + Longest register to pin delay is 4.498 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X36_Y14_N5; Fanout = 1; REG Node = 'res[5]'
+        Info: 2: + IC(2.094 ns) + CELL(2.404 ns) = 4.498 ns; Loc. = PIN_D9; Fanout = 0; PIN Node = 'result[5]'
+        Info: Total cell delay = 2.404 ns ( 53.45 % )
+        Info: Total interconnect delay = 2.094 ns ( 46.55 % )
+Info: th for register "o" (data pin = "ydata[0]", clock pin = "clock") is -2.708 ns
+    Info: + Longest clock path from clock "clock" to destination register is 2.887 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 15; CLK Node = 'clock'
+        Info: 2: + IC(1.620 ns) + CELL(0.542 ns) = 2.887 ns; Loc. = LC_X34_Y15_N2; Fanout = 1; REG Node = 'o'
+        Info: Total cell delay = 1.267 ns ( 43.89 % )
+        Info: Total interconnect delay = 1.620 ns ( 56.11 % )
+    Info: + Micro hold delay of destination is 0.100 ns
+    Info: - Shortest pin to register delay is 5.695 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.087 ns) = 1.087 ns; Loc. = PIN_K8; Fanout = 33; PIN Node = 'ydata[0]'
+        Info: 2: + IC(4.289 ns) + CELL(0.319 ns) = 5.695 ns; Loc. = LC_X34_Y15_N2; Fanout = 1; REG Node = 'o'
+        Info: Total cell delay = 1.406 ns ( 24.69 % )
+        Info: Total interconnect delay = 4.289 ns ( 75.31 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Processing ended: Tue Apr 16 15:42:10 2019
+    Info: Elapsed time: 00:00:01
+
+

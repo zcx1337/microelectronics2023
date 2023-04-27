@@ -1,0 +1,1121 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--res[0] is res[0]
+--operation mode is normal
+
+res[0]_lut_out = command_code[0] & A1L71 # !command_code[0] & (A1L91);
+res[0] = DFFEAS(res[0]_lut_out, clock, VCC, , , , , , );
+
+
+--res[1] is res[1]
+--operation mode is normal
+
+res[1]_lut_out = command_code[0] & A1L12 # !command_code[0] & (A1L32);
+res[1] = DFFEAS(res[1]_lut_out, clock, VCC, , , , , , );
+
+
+--res[2] is res[2]
+--operation mode is normal
+
+res[2]_lut_out = command_code[0] & A1L52 # !command_code[0] & (A1L72);
+res[2] = DFFEAS(res[2]_lut_out, clock, VCC, , , , , , );
+
+
+--res[3] is res[3]
+--operation mode is normal
+
+res[3]_lut_out = command_code[0] & A1L92 # !command_code[0] & (A1L13);
+res[3] = DFFEAS(res[3]_lut_out, clock, VCC, , , , , , );
+
+
+--res[4] is res[4]
+--operation mode is normal
+
+res[4]_lut_out = !command_code[2] & A1L23 & (A1L86 # command_code[0]);
+res[4] = DFFEAS(res[4]_lut_out, clock, VCC, , , , , , );
+
+
+--res[5] is res[5]
+--operation mode is normal
+
+res[5]_lut_out = A1L201 & (command_code[0] & S9L7 # !command_code[0] & (A1L86));
+res[5] = DFFEAS(res[5]_lut_out, clock, VCC, , , , , , );
+
+
+--res[6] is res[6]
+--operation mode is normal
+
+res[6]_lut_out = A1L201 & (command_code[0] & S9L9 # !command_code[0] & (A1L86));
+res[6] = DFFEAS(res[6]_lut_out, clock, VCC, , , , , , );
+
+
+--res[7] is res[7]
+--operation mode is normal
+
+res[7]_lut_out = A1L201 & (command_code[0] & S9L11 # !command_code[0] & (A1L86));
+res[7] = DFFEAS(res[7]_lut_out, clock, VCC, , , , , , );
+
+
+--z is z
+--operation mode is normal
+
+z_lut_out = command_code[0] & A1L43 # !command_code[0] & (A1L63);
+z = DFFEAS(z_lut_out, clock, VCC, , , , , , );
+
+
+--o is o
+--operation mode is normal
+
+o_lut_out = A1L28 & A1L1 & (!ydata[0]);
+o = DFFEAS(o_lut_out, clock, VCC, , , , , , );
+
+
+--n is n
+--operation mode is normal
+
+n_lut_out = A1L201 & !command_code[0] & (A1L01 # A1L11);
+n = DFFEAS(n_lut_out, clock, VCC, , , , , , );
+
+
+--A1L73 is Summator~136
+--operation mode is normal
+
+A1L73 = ydata[0] $ xdata[0];
+
+
+--A1L61 is Select~816
+--operation mode is normal
+
+A1L61 = command_code[2] & (command_code[1]) # !command_code[2] & (command_code[1] & N1_decoder_node[0][0] # !command_code[1] & (A1L73));
+
+
+--A1L71 is Select~817
+--operation mode is normal
+
+A1L71 = xdata[0] & (A1L61 & (!command_code[2]) # !A1L61 & ydata[0] & command_code[2]) # !xdata[0] & (A1L61);
+
+
+--A1L64 is add~619
+--operation mode is arithmetic
+
+A1L64 = ydata[0] $ xdata[0];
+
+--A1L74 is add~621
+--operation mode is arithmetic
+
+A1L74 = CARRY(ydata[0] # !xdata[0]);
+
+
+--A1L84 is add~624
+--operation mode is arithmetic
+
+A1L84 = ydata[0] $ xdata[0];
+
+--A1L94 is add~626
+--operation mode is arithmetic
+
+A1L94 = CARRY(xdata[0] # !ydata[0]);
+
+
+--A1L9 is LessThan~616
+--operation mode is normal
+
+A1L9 = ydata[1] & (ydata[0] & !xdata[0] # !xdata[1]) # !ydata[1] & ydata[0] & !xdata[0] & !xdata[1];
+
+
+--A1L83 is Summator~137
+--operation mode is normal
+
+A1L83 = ydata[3] $ xdata[3];
+
+
+--A1L01 is LessThan~617
+--operation mode is normal
+
+A1L01 = A1L9 & !A1L83 & (xdata[2] $ !ydata[2]);
+
+
+--A1L11 is LessThan~618
+--operation mode is normal
+
+A1L11 = ydata[3] & (ydata[2] & !xdata[2] # !xdata[3]) # !ydata[3] & ydata[2] & !xdata[2] & !xdata[3];
+
+
+--A1L05 is add~629
+--operation mode is normal
+
+A1L05 = A1L01 & A1L64 # !A1L01 & (A1L11 & A1L64 # !A1L11 & (A1L84));
+
+
+--L1L1 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~126
+--operation mode is normal
+
+L1L1_carry_eqn = L1L4;
+L1L1 = !L1L1_carry_eqn;
+
+
+--Divide.Divide[0] is Divide.Divide[0]
+--operation mode is normal
+
+Divide.Divide[0]_lut_out = L1L2;
+Divide.Divide[0] = DFFEAS(Divide.Divide[0]_lut_out, clock, VCC, , A1L1, , , , );
+
+
+--A1L28 is o~17
+--operation mode is normal
+
+A1L28 = !ydata[1] & !ydata[3] & !ydata[2];
+
+
+--L1L2 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~131
+--operation mode is normal
+
+L1L2 = A1L28 & (ydata[0] & L1L1 # !ydata[0] & (Divide.Divide[0])) # !A1L28 & L1L1;
+
+
+--A1L81 is Select~818
+--operation mode is normal
+
+A1L81 = command_code[1] & (command_code[2]) # !command_code[1] & (command_code[2] & L1L2 # !command_code[2] & (xdata[0]));
+
+
+--A1L21 is Operation_or~0
+--operation mode is normal
+
+A1L21 = ydata[0] # xdata[0];
+
+
+--A1L91 is Select~819
+--operation mode is normal
+
+A1L91 = command_code[1] & (A1L81 & (A1L21) # !A1L81 & A1L05) # !command_code[1] & (A1L81);
+
+
+--S3L1 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~40
+--operation mode is arithmetic
+
+S3L1 = N1_decoder_node[0][1] $ N1_decoder_node[1][0];
+
+--S3L2 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~42
+--operation mode is arithmetic
+
+S3L2 = CARRY(N1_decoder_node[0][1] & N1_decoder_node[1][0]);
+
+
+--A1L93 is Summator~138
+--operation mode is normal
+
+A1L93 = ydata[1] $ xdata[1] $ (ydata[0] & xdata[0]);
+
+
+--A1L02 is Select~821
+--operation mode is normal
+
+A1L02 = command_code[2] & (command_code[1]) # !command_code[2] & (command_code[1] & S3L1 # !command_code[1] & (A1L93));
+
+
+--A1L12 is Select~822
+--operation mode is normal
+
+A1L12 = xdata[1] & (A1L02 & (!command_code[2]) # !A1L02 & ydata[1] & command_code[2]) # !xdata[1] & (A1L02);
+
+
+--A1L15 is add~630
+--operation mode is arithmetic
+
+A1L15_carry_eqn = A1L74;
+A1L15 = ydata[1] $ xdata[1] $ !A1L15_carry_eqn;
+
+--A1L25 is add~632
+--operation mode is arithmetic
+
+A1L25 = CARRY(ydata[1] & xdata[1] & !A1L74 # !ydata[1] & (xdata[1] # !A1L74));
+
+
+--A1L35 is add~635
+--operation mode is arithmetic
+
+A1L35_carry_eqn = A1L94;
+A1L35 = ydata[1] $ xdata[1] $ !A1L35_carry_eqn;
+
+--A1L45 is add~637
+--operation mode is arithmetic
+
+A1L45 = CARRY(ydata[1] & (!A1L94 # !xdata[1]) # !ydata[1] & !xdata[1] & !A1L94);
+
+
+--A1L55 is add~640
+--operation mode is normal
+
+A1L55 = A1L01 & A1L15 # !A1L01 & (A1L11 & A1L15 # !A1L11 & (A1L35));
+
+
+--Divide.Divide[1] is Divide.Divide[1]
+--operation mode is normal
+
+Divide.Divide[1]_lut_out = A1L6;
+Divide.Divide[1] = DFFEAS(Divide.Divide[1]_lut_out, clock, VCC, , A1L1, , , , );
+
+
+--K1L1 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2|add_sub_cella[0]~44
+--operation mode is normal
+
+K1L1_carry_eqn = K1L3;
+K1L1 = K1L1_carry_eqn;
+
+
+--G1_selnose[10] is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|selnose[10]
+--operation mode is normal
+
+G1_selnose[10] = ydata[3] # !K1L1;
+
+
+--A1L6 is Divide~197
+--operation mode is normal
+
+A1L6 = A1L28 & (ydata[0] & (!G1_selnose[10]) # !ydata[0] & Divide.Divide[1]) # !A1L28 & (!G1_selnose[10]);
+
+
+--A1L22 is Select~823
+--operation mode is normal
+
+A1L22 = command_code[1] & (command_code[2]) # !command_code[1] & (command_code[2] & A1L6 # !command_code[2] & (xdata[1]));
+
+
+--A1L31 is Operation_or~1
+--operation mode is normal
+
+A1L31 = ydata[1] # xdata[1];
+
+
+--A1L32 is Select~824
+--operation mode is normal
+
+A1L32 = command_code[1] & (A1L22 & (A1L31) # !A1L22 & A1L55) # !command_code[1] & (A1L22);
+
+
+--S9L1 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~84
+--operation mode is arithmetic
+
+S9L1 = S3L3 $ N1_decoder_node[2][0];
+
+--S9L2 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~86
+--operation mode is arithmetic
+
+S9L2 = CARRY(S3L3 & N1_decoder_node[2][0]);
+
+
+--A1L96 is bit~98
+--operation mode is normal
+
+A1L96 = ydata[1] & (xdata[1] # ydata[0] & xdata[0]) # !ydata[1] & ydata[0] & xdata[0] & xdata[1];
+
+
+--A1L04 is Summator~139
+--operation mode is normal
+
+A1L04 = xdata[2] $ ydata[2] $ A1L96;
+
+
+--A1L42 is Select~826
+--operation mode is normal
+
+A1L42 = command_code[2] & (command_code[1]) # !command_code[2] & (command_code[1] & S9L1 # !command_code[1] & (A1L04));
+
+
+--A1L52 is Select~827
+--operation mode is normal
+
+A1L52 = xdata[2] & (A1L42 & (!command_code[2]) # !A1L42 & ydata[2] & command_code[2]) # !xdata[2] & (A1L42);
+
+
+--A1L65 is add~641
+--operation mode is arithmetic
+
+A1L65_carry_eqn = A1L25;
+A1L65 = ydata[2] $ xdata[2] $ A1L65_carry_eqn;
+
+--A1L75 is add~643
+--operation mode is arithmetic
+
+A1L75 = CARRY(ydata[2] & (!A1L25 # !xdata[2]) # !ydata[2] & !xdata[2] & !A1L25);
+
+
+--A1L85 is add~646
+--operation mode is arithmetic
+
+A1L85_carry_eqn = A1L45;
+A1L85 = ydata[2] $ xdata[2] $ A1L85_carry_eqn;
+
+--A1L95 is add~648
+--operation mode is arithmetic
+
+A1L95 = CARRY(ydata[2] & xdata[2] & !A1L45 # !ydata[2] & (xdata[2] # !A1L45));
+
+
+--A1L06 is add~651
+--operation mode is normal
+
+A1L06 = A1L01 & A1L65 # !A1L01 & (A1L11 & A1L65 # !A1L11 & (A1L85));
+
+
+--Divide.Divide[2] is Divide.Divide[2]
+--operation mode is normal
+
+Divide.Divide[2]_lut_out = A1L7;
+Divide.Divide[2] = DFFEAS(Divide.Divide[2]_lut_out, clock, VCC, , A1L1, , , , );
+
+
+--G1L2 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|selnose[5]~65
+--operation mode is normal
+
+G1L2 = ydata[3] # ydata[2] # ydata[1] & !xdata[3];
+
+
+--G1L3 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|selnose[5]~66
+--operation mode is normal
+
+G1L3 = G1L2 # ydata[0] & (!xdata[2]);
+
+
+--A1L7 is Divide~198
+--operation mode is normal
+
+A1L7 = A1L28 & (ydata[0] & (!G1L3) # !ydata[0] & Divide.Divide[2]) # !A1L28 & (!G1L3);
+
+
+--A1L62 is Select~828
+--operation mode is normal
+
+A1L62 = command_code[1] & (command_code[2]) # !command_code[1] & (command_code[2] & A1L7 # !command_code[2] & (xdata[2]));
+
+
+--A1L41 is Operation_or~2
+--operation mode is normal
+
+A1L41 = xdata[2] # ydata[2];
+
+
+--A1L72 is Select~829
+--operation mode is normal
+
+A1L72 = command_code[1] & (A1L62 & (A1L41) # !A1L62 & A1L06) # !command_code[1] & (A1L62);
+
+
+--S9L3 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~89
+--operation mode is arithmetic
+
+S9L3_carry_eqn = S9L2;
+S9L3 = S3L5 $ S6L1 $ S9L3_carry_eqn;
+
+--S9L4 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~91
+--operation mode is arithmetic
+
+S9L4 = CARRY(S3L5 & !S6L1 & !S9L2 # !S3L5 & (!S9L2 # !S6L1));
+
+
+--A1L14 is Summator~140
+--operation mode is normal
+
+A1L14 = A1L83 $ (xdata[2] & (ydata[2] # A1L96) # !xdata[2] & ydata[2] & A1L96);
+
+
+--A1L82 is Select~831
+--operation mode is normal
+
+A1L82 = command_code[2] & (command_code[1]) # !command_code[2] & (command_code[1] & S9L3 # !command_code[1] & (A1L14));
+
+
+--A1L92 is Select~832
+--operation mode is normal
+
+A1L92 = xdata[3] & (A1L82 & (!command_code[2]) # !A1L82 & ydata[3] & command_code[2]) # !xdata[3] & (A1L82);
+
+
+--A1L16 is add~652
+--operation mode is arithmetic
+
+A1L16_carry_eqn = A1L75;
+A1L16 = ydata[3] $ xdata[3] $ !A1L16_carry_eqn;
+
+--A1L26 is add~654
+--operation mode is arithmetic
+
+A1L26 = CARRY(ydata[3] & xdata[3] & !A1L75 # !ydata[3] & (xdata[3] # !A1L75));
+
+
+--A1L36 is add~657
+--operation mode is arithmetic
+
+A1L36_carry_eqn = A1L95;
+A1L36 = ydata[3] $ xdata[3] $ !A1L36_carry_eqn;
+
+--A1L46 is add~659
+--operation mode is arithmetic
+
+A1L46 = CARRY(ydata[3] & (!A1L95 # !xdata[3]) # !ydata[3] & !xdata[3] & !A1L95);
+
+
+--A1L56 is add~662
+--operation mode is normal
+
+A1L56 = A1L01 & A1L16 # !A1L01 & (A1L11 & A1L16 # !A1L11 & (A1L36));
+
+
+--Divide.Divide[3] is Divide.Divide[3]
+--operation mode is normal
+
+Divide.Divide[3]_lut_out = A1L8;
+Divide.Divide[3] = DFFEAS(Divide.Divide[3]_lut_out, clock, VCC, , A1L1, , , , );
+
+
+--A1L8 is Divide~199
+--operation mode is normal
+
+A1L8 = A1L28 & (ydata[0] & xdata[3] # !ydata[0] & (Divide.Divide[3]));
+
+
+--A1L03 is Select~833
+--operation mode is normal
+
+A1L03 = command_code[1] & (command_code[2]) # !command_code[1] & (command_code[2] & A1L8 # !command_code[2] & (xdata[3]));
+
+
+--A1L51 is Operation_or~3
+--operation mode is normal
+
+A1L51 = ydata[3] # xdata[3];
+
+
+--A1L13 is Select~834
+--operation mode is normal
+
+A1L13 = command_code[1] & (A1L03 & (A1L51) # !A1L03 & A1L56) # !command_code[1] & (A1L03);
+
+
+--A1L66 is add~663
+--operation mode is normal
+
+A1L66_carry_eqn = A1L26;
+A1L66 = A1L66_carry_eqn;
+
+
+--A1L76 is add~668
+--operation mode is normal
+
+A1L76_carry_eqn = A1L46;
+A1L76 = A1L76_carry_eqn;
+
+
+--A1L86 is add~673
+--operation mode is normal
+
+A1L86 = A1L01 & A1L66 # !A1L01 & (A1L11 & A1L66 # !A1L11 & (A1L76));
+
+
+--A1L07 is bit~99
+--operation mode is normal
+
+A1L07 = ydata[2] & (A1L96 # xdata[2]) # !ydata[2] & A1L96 & xdata[2];
+
+
+--A1L17 is bit~100
+--operation mode is normal
+
+A1L17 = ydata[3] & (xdata[3] # A1L07) # !ydata[3] & xdata[3] & A1L07;
+
+
+--S9L5 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~94
+--operation mode is arithmetic
+
+S9L5_carry_eqn = S9L4;
+S9L5 = S3L7 $ S6L3 $ !S9L5_carry_eqn;
+
+--S9L6 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~96
+--operation mode is arithmetic
+
+S9L6 = CARRY(S3L7 & (S6L3 # !S9L4) # !S3L7 & S6L3 & !S9L4);
+
+
+--A1L23 is Select~836
+--operation mode is normal
+
+A1L23 = command_code[0] & (command_code[1] & (S9L5) # !command_code[1] & A1L17) # !command_code[0] & (command_code[1]);
+
+
+--A1L201 is res[5]~48
+--operation mode is normal
+
+A1L201 = command_code[1] & (!command_code[2]);
+
+
+--S9L7 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~99
+--operation mode is arithmetic
+
+S9L7_carry_eqn = S9L6;
+S9L7 = S3L9 $ S6L5 $ S9L7_carry_eqn;
+
+--S9L8 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~101
+--operation mode is arithmetic
+
+S9L8 = CARRY(S3L9 & !S6L5 & !S9L6 # !S3L9 & (!S9L6 # !S6L5));
+
+
+--S9L9 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~104
+--operation mode is arithmetic
+
+S9L9_carry_eqn = S9L8;
+S9L9 = S6L7 $ (!S9L9_carry_eqn);
+
+--S9L01 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~106
+--operation mode is arithmetic
+
+S9L01 = CARRY(S6L7 & (!S9L8));
+
+
+--S9L11 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~109
+--operation mode is normal
+
+S9L11_carry_eqn = S9L01;
+S9L11 = S6L9 $ (S9L11_carry_eqn);
+
+
+--N1_decoder_node[0][0] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[0][0]
+--operation mode is normal
+
+N1_decoder_node[0][0] = LCELL(ydata[0] & xdata[0]);
+
+
+--N1_decoder_node[3][3] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[3][3]
+--operation mode is normal
+
+N1_decoder_node[3][3] = LCELL(ydata[3] & xdata[3]);
+
+
+--N1_decoder_node[1][1] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[1][1]
+--operation mode is normal
+
+N1_decoder_node[1][1] = LCELL(ydata[1] & xdata[1]);
+
+
+--N1_decoder_node[2][2] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[2][2]
+--operation mode is normal
+
+N1_decoder_node[2][2] = LCELL(xdata[2] & ydata[2]);
+
+
+--A1L48 is reduce_nor~6
+--operation mode is normal
+
+A1L48 = N1_decoder_node[0][0] # N1_decoder_node[3][3] # N1_decoder_node[1][1] # N1_decoder_node[2][2];
+
+
+--A1L68 is reduce_nor~334
+--operation mode is normal
+
+A1L68 = S3L1 # S9L1 # S9L3 # N1_decoder_node[0][0];
+
+
+--A1L78 is reduce_nor~335
+--operation mode is normal
+
+A1L78 = S9L5 # S9L7;
+
+
+--A1L38 is reduce_nor~3
+--operation mode is normal
+
+A1L38 = S9L9 # S9L11 # A1L68 # A1L78;
+
+
+--A1L88 is reduce_nor~336
+--operation mode is normal
+
+A1L88 = A1L17 # xdata[2] $ ydata[2] $ A1L96;
+
+
+--A1L98 is reduce_nor~337
+--operation mode is normal
+
+A1L98 = A1L73 # A1L93 # A1L14 # A1L88;
+
+
+--A1L33 is Select~841
+--operation mode is normal
+
+A1L33 = command_code[2] & (command_code[1]) # !command_code[2] & (command_code[1] & !A1L38 # !command_code[1] & (!A1L98));
+
+
+--A1L09 is reduce_nor~338
+--operation mode is normal
+
+A1L09 = !xdata[2] # !xdata[3] # !xdata[1] # !xdata[0];
+
+
+--A1L43 is Select~842
+--operation mode is normal
+
+A1L43 = command_code[2] & (A1L33 & (!A1L09) # !A1L33 & !A1L48) # !command_code[2] & (A1L33);
+
+
+--A1L19 is reduce_nor~339
+--operation mode is normal
+
+A1L19 = A1L05 # A1L55;
+
+
+--A1L29 is reduce_nor~340
+--operation mode is normal
+
+A1L29 = A1L06 # A1L56 # A1L86 # A1L19;
+
+
+--A1L39 is reduce_nor~341
+--operation mode is normal
+
+A1L39 = L1L2 # A1L6 # A1L7 # A1L8;
+
+
+--A1L49 is reduce_nor~342
+--operation mode is normal
+
+A1L49 = xdata[0] # xdata[1] # xdata[3] # xdata[2];
+
+
+--A1L53 is Select~843
+--operation mode is normal
+
+A1L53 = command_code[1] & (command_code[2]) # !command_code[1] & (command_code[2] & !A1L39 # !command_code[2] & (!A1L49));
+
+
+--A1L58 is reduce_nor~7
+--operation mode is normal
+
+A1L58 = A1L21 # A1L31 # A1L41 # A1L51;
+
+
+--A1L63 is Select~844
+--operation mode is normal
+
+A1L63 = command_code[1] & (A1L53 & (!A1L58) # !A1L53 & !A1L29) # !command_code[1] & (A1L53);
+
+
+--A1L1 is Decoder~37
+--operation mode is normal
+
+A1L1 = command_code[2] & (!command_code[0] & !command_code[1]);
+
+
+--L1L4 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~134
+--operation mode is arithmetic
+
+L1L4 = CARRY(G1L01 & ydata[3] & !L1L6 # !G1L01 & (ydata[3] # !L1L6));
+
+
+--K1L2 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2|add_sub_cella[0]~49
+--operation mode is arithmetic
+
+K1L2_carry_eqn = K1L5;
+K1L2 = G1L7 $ ydata[2] $ K1L2_carry_eqn;
+
+--K1L3 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2|add_sub_cella[0]~51
+--operation mode is arithmetic
+
+K1L3 = CARRY(G1L7 & (!K1L5 # !ydata[2]) # !G1L7 & !ydata[2] & !K1L5);
+
+
+--S3L3 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~45
+--operation mode is arithmetic
+
+S3L3_carry_eqn = S3L2;
+S3L3 = N1_decoder_node[0][2] $ N1_decoder_node[1][1] $ S3L3_carry_eqn;
+
+--S3L4 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~47
+--operation mode is arithmetic
+
+S3L4 = CARRY(N1_decoder_node[0][2] & !N1_decoder_node[1][1] & !S3L2 # !N1_decoder_node[0][2] & (!S3L2 # !N1_decoder_node[1][1]));
+
+
+--S3L5 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~50
+--operation mode is arithmetic
+
+S3L5_carry_eqn = S3L4;
+S3L5 = N1_decoder_node[0][3] $ N1_decoder_node[1][2] $ !S3L5_carry_eqn;
+
+--S3L6 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~52
+--operation mode is arithmetic
+
+S3L6 = CARRY(N1_decoder_node[0][3] & (N1_decoder_node[1][2] # !S3L4) # !N1_decoder_node[0][3] & N1_decoder_node[1][2] & !S3L4);
+
+
+--S6L1 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~33
+--operation mode is arithmetic
+
+S6L1 = N1_decoder_node[2][1] $ N1_decoder_node[3][0];
+
+--S6L2 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~35
+--operation mode is arithmetic
+
+S6L2 = CARRY(N1_decoder_node[2][1] & N1_decoder_node[3][0]);
+
+
+--S3L7 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~55
+--operation mode is arithmetic
+
+S3L7_carry_eqn = S3L6;
+S3L7 = N1_decoder_node[1][3] $ (S3L7_carry_eqn);
+
+--S3L8 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~57
+--operation mode is arithmetic
+
+S3L8 = CARRY(!S3L6 # !N1_decoder_node[1][3]);
+
+
+--S6L3 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~38
+--operation mode is arithmetic
+
+S6L3_carry_eqn = S6L2;
+S6L3 = N1_decoder_node[2][2] $ N1_decoder_node[3][1] $ S6L3_carry_eqn;
+
+--S6L4 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~40
+--operation mode is arithmetic
+
+S6L4 = CARRY(N1_decoder_node[2][2] & !N1_decoder_node[3][1] & !S6L2 # !N1_decoder_node[2][2] & (!S6L2 # !N1_decoder_node[3][1]));
+
+
+--S3L9 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~60
+--operation mode is normal
+
+S3L9_carry_eqn = S3L8;
+S3L9 = !S3L9_carry_eqn;
+
+
+--S6L5 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~43
+--operation mode is arithmetic
+
+S6L5_carry_eqn = S6L4;
+S6L5 = N1_decoder_node[2][3] $ N1_decoder_node[3][2] $ !S6L5_carry_eqn;
+
+--S6L6 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~45
+--operation mode is arithmetic
+
+S6L6 = CARRY(N1_decoder_node[2][3] & (N1_decoder_node[3][2] # !S6L4) # !N1_decoder_node[2][3] & N1_decoder_node[3][2] & !S6L4);
+
+
+--S6L7 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~48
+--operation mode is arithmetic
+
+S6L7_carry_eqn = S6L6;
+S6L7 = N1_decoder_node[3][3] $ (S6L7_carry_eqn);
+
+--S6L8 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~50
+--operation mode is arithmetic
+
+S6L8 = CARRY(!S6L6 # !N1_decoder_node[3][3]);
+
+
+--S6L9 is lpm_mult:mult_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~53
+--operation mode is normal
+
+S6L9_carry_eqn = S6L8;
+S6L9 = !S6L9_carry_eqn;
+
+
+--G1L6 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|StageOut[5]~403
+--operation mode is normal
+
+G1L6 = ydata[0] & ydata[1] & !xdata[2] # !ydata[0] & !ydata[1];
+
+
+--G1L7 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|StageOut[5]~404
+--operation mode is normal
+
+G1L7 = xdata[3] & (ydata[3] # ydata[2] # G1L6);
+
+
+--L1L6 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~139
+--operation mode is arithmetic
+
+L1L6 = CARRY(G1L9 & (!L1L8 # !ydata[2]) # !G1L9 & !ydata[2] & !L1L8);
+
+
+--N1_decoder_node[0][1] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[0][1]
+--operation mode is normal
+
+N1_decoder_node[0][1] = LCELL(ydata[0] & xdata[1]);
+
+
+--N1_decoder_node[1][0] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[1][0]
+--operation mode is normal
+
+N1_decoder_node[1][0] = LCELL(xdata[0] & ydata[1]);
+
+
+--K1L4 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2|add_sub_cella[0]~54
+--operation mode is arithmetic
+
+K1L4_carry_eqn = K1L7;
+K1L4 = G1L5 $ ydata[1] $ !K1L4_carry_eqn;
+
+--K1L5 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2|add_sub_cella[0]~56
+--operation mode is arithmetic
+
+K1L5 = CARRY(G1L5 & ydata[1] & !K1L7 # !G1L5 & (ydata[1] # !K1L7));
+
+
+--N1_decoder_node[2][0] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[2][0]
+--operation mode is normal
+
+N1_decoder_node[2][0] = LCELL(xdata[0] & ydata[2]);
+
+
+--G1L5 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|StageOut[4]~405
+--operation mode is normal
+
+G1L5 = xdata[2] & (G1L2 # !ydata[0]);
+
+
+--L1L8 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~144
+--operation mode is arithmetic
+
+L1L8 = CARRY(G1L8 & ydata[1] & !L1L01 # !G1L8 & (ydata[1] # !L1L01));
+
+
+--K1L6 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2|add_sub_cella[0]~59
+--operation mode is arithmetic
+
+K1L6 = ydata[0] $ xdata[1];
+
+--K1L7 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_of8:add_sub_2|add_sub_cella[0]~61
+--operation mode is arithmetic
+
+K1L7 = CARRY(xdata[1] # !ydata[0]);
+
+
+--N1_decoder_node[0][2] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[0][2]
+--operation mode is normal
+
+N1_decoder_node[0][2] = LCELL(ydata[0] & xdata[2]);
+
+
+--N1_decoder_node[0][3] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[0][3]
+--operation mode is normal
+
+N1_decoder_node[0][3] = LCELL(ydata[0] & xdata[3]);
+
+
+--N1_decoder_node[1][2] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[1][2]
+--operation mode is normal
+
+N1_decoder_node[1][2] = LCELL(ydata[1] & xdata[2]);
+
+
+--N1_decoder_node[2][1] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[2][1]
+--operation mode is normal
+
+N1_decoder_node[2][1] = LCELL(xdata[1] & ydata[2]);
+
+
+--N1_decoder_node[3][0] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[3][0]
+--operation mode is normal
+
+N1_decoder_node[3][0] = LCELL(xdata[0] & ydata[3]);
+
+
+--N1_decoder_node[1][3] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[1][3]
+--operation mode is normal
+
+N1_decoder_node[1][3] = LCELL(ydata[1] & xdata[3]);
+
+
+--N1_decoder_node[3][1] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[3][1]
+--operation mode is normal
+
+N1_decoder_node[3][1] = LCELL(xdata[1] & ydata[3]);
+
+
+--N1_decoder_node[2][3] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[2][3]
+--operation mode is normal
+
+N1_decoder_node[2][3] = LCELL(xdata[3] & ydata[2]);
+
+
+--N1_decoder_node[3][2] is lpm_mult:mult_rtl_1|multcore:mult_core|decoder_node[3][2]
+--operation mode is normal
+
+N1_decoder_node[3][2] = LCELL(ydata[3] & xdata[2]);
+
+
+--G1L8 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|StageOut[8]~406
+--operation mode is normal
+
+G1L8 = K1L1 & (ydata[3] & xdata[1] # !ydata[3] & (K1L6)) # !K1L1 & xdata[1];
+
+
+--L1L01 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|add_sub_pf8:add_sub_3|add_sub_cella[0]~149
+--operation mode is arithmetic
+
+L1L01 = CARRY(xdata[0] # !ydata[0]);
+
+
+--G1L01 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|StageOut[10]~407
+--operation mode is normal
+
+G1L01 = ydata[3] & (G1L7) # !ydata[3] & (K1L1 & (K1L2) # !K1L1 & G1L7);
+
+
+--G1L9 is lpm_divide:div_rtl_0|lpm_divide_imf:auto_generated|sign_div_unsign_ihg:divider|alt_u_div_bmd:divider|StageOut[9]~408
+--operation mode is normal
+
+G1L9 = ydata[3] & (G1L5) # !ydata[3] & (K1L1 & (K1L4) # !K1L1 & G1L5);
+
+
+--ydata[0] is ydata[0]
+--operation mode is input
+
+ydata[0] = INPUT();
+
+
+--xdata[0] is xdata[0]
+--operation mode is input
+
+xdata[0] = INPUT();
+
+
+--command_code[2] is command_code[2]
+--operation mode is input
+
+command_code[2] = INPUT();
+
+
+--command_code[1] is command_code[1]
+--operation mode is input
+
+command_code[1] = INPUT();
+
+
+--ydata[1] is ydata[1]
+--operation mode is input
+
+ydata[1] = INPUT();
+
+
+--xdata[1] is xdata[1]
+--operation mode is input
+
+xdata[1] = INPUT();
+
+
+--xdata[2] is xdata[2]
+--operation mode is input
+
+xdata[2] = INPUT();
+
+
+--ydata[2] is ydata[2]
+--operation mode is input
+
+ydata[2] = INPUT();
+
+
+--ydata[3] is ydata[3]
+--operation mode is input
+
+ydata[3] = INPUT();
+
+
+--xdata[3] is xdata[3]
+--operation mode is input
+
+xdata[3] = INPUT();
+
+
+--command_code[0] is command_code[0]
+--operation mode is input
+
+command_code[0] = INPUT();
+
+
+--clock is clock
+--operation mode is input
+
+clock = INPUT();
+
+
+--result[0] is result[0]
+--operation mode is output
+
+result[0] = OUTPUT(res[0]);
+
+
+--result[1] is result[1]
+--operation mode is output
+
+result[1] = OUTPUT(res[1]);
+
+
+--result[2] is result[2]
+--operation mode is output
+
+result[2] = OUTPUT(res[2]);
+
+
+--result[3] is result[3]
+--operation mode is output
+
+result[3] = OUTPUT(res[3]);
+
+
+--result[4] is result[4]
+--operation mode is output
+
+result[4] = OUTPUT(res[4]);
+
+
+--result[5] is result[5]
+--operation mode is output
+
+result[5] = OUTPUT(res[5]);
+
+
+--result[6] is result[6]
+--operation mode is output
+
+result[6] = OUTPUT(res[6]);
+
+
+--result[7] is result[7]
+--operation mode is output
+
+result[7] = OUTPUT(res[7]);
+
+
+--flagZ is flagZ
+--operation mode is output
+
+flagZ = OUTPUT(z);
+
+
+--flagO is flagO
+--operation mode is output
+
+flagO = OUTPUT(o);
+
+
+--flagN is flagN
+--operation mode is output
+
+flagN = OUTPUT(n);
+
+

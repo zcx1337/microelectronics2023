@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="laba633">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALU|lpm_mult:mult_rtl_2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_c0h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALU|lpm_mult:mult_rtl_2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]" CBX_FILE_NAME="add_sub_c0h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALU|lpm_mult:mult_rtl_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_d0h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALU|lpm_divide:div_rtl_3" CBX_FILE_NAME="lpm_divide_imf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALU|lpm_add_sub:add_rtl_0" CBX_FILE_NAME="add_sub_foh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALU|lpm_add_sub:add_rtl_1" CBX_FILE_NAME="add_sub_foh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
