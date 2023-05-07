@@ -1,0 +1,95 @@
+﻿cl : командная строка  warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
+  instance_specific_extensions.cpp
+  convenience_socket_bases.cpp
+  tlm_global_quantum.cpp
+  tlm_phase.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  tlm_gp.cpp
+  scfx_utils.cpp
+  scfx_rep.cpp
+  scfx_pow10.cpp
+  scfx_mant.cpp
+  sc_wif_trace.cpp
+  sc_wait_cthread.cpp
+  sc_wait.cpp
+  sc_ver.cpp
+  sc_vector.cpp
+  sc_vcd_trace.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  sc_value_base.cpp
+  sc_utils_ids.cpp
+  sc_unsigned.cpp
+  sc_uint_base.cpp
+  sc_trace_file_base.cpp
+  Создание кода...
+  Компиляция...
+  sc_trace.cpp
+  sc_time.cpp
+  sc_thread_process.cpp
+  sc_string.cpp
+  sc_stop_here.cpp
+  sc_spawn_options.cpp
+  sc_simcontext.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  sc_signed.cpp
+  sc_signal_resolved_ports.cpp
+  sc_signal_resolved.cpp
+  sc_signal_ports.cpp
+  sc_signal.cpp
+  sc_sensitive.cpp
+  sc_semaphore.cpp
+  sc_reset.cpp
+  sc_report_handler.cpp
+  sc_report.cpp
+  sc_process.cpp
+  sc_prim_channel.cpp
+  sc_pq.cpp
+  Создание кода...
+  Компиляция...
+  sc_port.cpp
+  sc_phase_callback_registry.cpp
+  sc_object_manager.cpp
+  sc_object.cpp
+  sc_nbutils.cpp
+  sc_nbexterns.cpp
+  sc_name_gen.cpp
+  sc_mutex.cpp
+  sc_module_registry.cpp
+  sc_module_name.cpp
+  sc_module.cpp
+  sc_method_process.cpp
+  sc_mempool.cpp
+  sc_lv_base.cpp
+  sc_logic.cpp
+  sc_list.cpp
+  sc_length_param.cpp
+  sc_join.cpp
+  sc_interface.cpp
+  sc_int_mask.cpp
+  Создание кода...
+  Компиляция...
+  sc_int_base.cpp
+  sc_hash.cpp
+  sc_fxval_observer.cpp
+  sc_fxval.cpp
+  sc_fxtype_params.cpp
+  sc_fxnum_observer.cpp
+  sc_fxnum.cpp
+  sc_fxdefs.cpp
+  sc_fxcast_switch.cpp
+  sc_export.cpp
+  sc_except.cpp
+  sc_event_queue.cpp
+  sc_event_finder.cpp
+  sc_event.cpp
+  sc_cthread_process.cpp
+  sc_cor_fiber.cpp
+  sc_concatref.cpp
+  sc_clock.cpp
+  sc_bv_base.cpp
+  sc_bit.cpp
+  Создание кода...
+  Компиляция...
+  sc_attribute.cpp
+  Создание кода...
+  SystemC-core.vcxproj -> D:\cхем\systemc-2.3.3\msvc10\SystemC\Debug\lab1-2.3.3.lib
