@@ -1,5 +1,0 @@
-﻿cl : командная строка  warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
-  sc_main_main.cpp
-  sc_main.cpp
-  Создание кода...
-  SystemC.vcxproj -> D:\cхем\systemc-2.3.3\msvc10\SystemC\x64\Debug\SystemC.lib
